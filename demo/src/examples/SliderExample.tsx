@@ -15,7 +15,6 @@ export default function SliderExample() {
       <div className={styles.example}>
         <div className={styles.preview}>
           <Slider
-            label="Opacity"
             value={value}
             min={0}
             max={100}
@@ -27,7 +26,6 @@ export default function SliderExample() {
 const [value, setValue] = useState(50);
 
 <Slider
-  label="Opacity"
   value={value}
   min={0}
   max={100}
