@@ -78,14 +78,6 @@
   display: none;
 }
 
-.select.error::before {
-  background-color: rgba(from var(--wfui-error) R G B / 0.5);
-}
-
-.select.error::after {
-  background-color: var(--wfui-error);
-}
-
 .select.open {
   color: var(--wfui-primary);
 }
@@ -138,10 +130,4 @@
 
 .option:hover {
   background-color: var(--wfui-bg);
-}
-
-.errorText {
-  font-size: 12px;
-  color: #ef4444;
-  margin-top: 4px;
 }

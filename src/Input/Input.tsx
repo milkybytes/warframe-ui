@@ -1,22 +1,19 @@
 import styles from './Input.module.css';
 
-export type InputVariant = 'default' | 'surface' | 'error' | 'success' | 'warning' | 'info';
-
 export interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
-  variant?: InputVariant;
   icon?: React.ReactNode;
   onClear?: () => void;
   showClear?: boolean;
 }
 
-const Input = ({ variant = 'default', icon, onClear, showClear = false, value, ...rest }: InputProps) => {
+const Input = ({ icon, onClear, showClear = false, value, ...rest }: InputProps) => {
   const shouldShowClear = showClear && onClear && value;
   const hasRightContent = icon || shouldShowClear;
 
   return (
     <div className={styles.inputWrapper}>
       <input
-        className={`${styles.input} ${styles[variant]} ${hasRightContent ? styles.hasIcon : ''}`}
+        className={`${styles.input} ${hasRightContent ? styles.hasIcon : ''}`}
         value={value}
         {...rest}
       />

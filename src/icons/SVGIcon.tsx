@@ -3,7 +3,6 @@ import styles from './SVGIcon.module.css';
 
 export interface SVGIconProps {
   children?: React.ReactNode;
-  variant?: string;
   disabled?: boolean;
   fill?: string;
   className?: string;
@@ -11,7 +10,7 @@ export interface SVGIconProps {
   [key: string]: any;
 }
 
-const SVGIcon = ({ children, variant, disabled = false, fill, className, size, ...props }: SVGIconProps) => {
+const SVGIcon = ({ children, disabled = false, fill, className, size, ...props }: SVGIconProps) => {
   const style = {
     ...(fill && { fill }),
     ...(size && { width: `${size}px`, height: `${size}px` }),
@@ -20,7 +19,6 @@ const SVGIcon = ({ children, variant, disabled = false, fill, className, size, .
   return (
     <svg
       className={`${styles.SVGIcon} ${className || ''}`}
-      data-variant={variant}
       data-disabled={disabled}
       style={style}
       {...props}

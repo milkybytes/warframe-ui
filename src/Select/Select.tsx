@@ -12,7 +12,6 @@ export interface SelectProps {
   options?: SelectOption[];
   children?: React.ReactNode;
   className?: string;
-  error?: string;
   disabled?: boolean;
   placeholder?: string;
   id?: string;
@@ -25,7 +24,6 @@ const Select = ({
   options,
   children,
   className,
-  error,
   disabled = false,
   placeholder = 'Select...',
   id,
@@ -81,7 +79,7 @@ const Select = ({
     <div className={styles.selectWrapper} ref={wrapperRef}>
       <div
         id={id}
-        className={`${styles.select} ${className || ''} ${error ? styles.error : ''} ${
+        className={`${styles.select} ${className || ''} ${
           disabled ? styles.disabled : ''
         } ${isOpen ? styles.open : ''}`}
         onClick={handleToggle}
@@ -119,8 +117,6 @@ const Select = ({
           ))}
         </div>
       )}
-
-      {error && <span className={styles.errorText}>{error}</span>}
     </div>
   );
 };

@@ -95,31 +95,3 @@
   width: 100%;
 }
 
-.textarea.surface {
-  color: var(--wfui-text-secondary);
-  background: var(--wfui-surface);
-}
-
-.textarea.error {
-  color: var(--wfui-error);
-  background: rgba(from var(--wfui-error) R G B / 0.1) !important;
-  outline-color: var(--wfui-error);
-}
-
-.textarea.success {
-  color: var(--wfui-success);
-  background: rgba(from var(--wfui-success) R G B / 0.1) !important;
-  outline-color: var(--wfui-success);
-}
-
-.textarea.warning {
-  color: var(--wfui-warning);
-  background: rgba(from var(--wfui-warning) R G B / 0.1) !important;
-  outline-color: var(--wfui-warning);
-}
-
-.textarea.info {
-  color: var(--wfui-info);
-  background: rgba(from var(--wfui-info) R G B / 0.1) !important;
-  outline-color: var(--wfui-info);
-}

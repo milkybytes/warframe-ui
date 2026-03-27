@@ -33,7 +33,6 @@ const SearchBar = ({
   return (
     <div className={`${styles.searchContainer} ${className || ''}`}>
       <Input
-        variant="surface"
         placeholder={placeholder}
         value={value}
         onChange={handleInputChange}

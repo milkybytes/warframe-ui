@@ -9,15 +9,11 @@
  * CSS variables:
  *   --wfui-bg               Page background
  *   --wfui-text             Text on background
- *   --wfui-surface          Elevated surface color
+ *   --wfui-surface          Elevated surface color, used in buttons and inputs
  *   --wfui-primary          Primary accent / brand color
  *   --wfui-secondary        Secondary background (cards, inputs)
  *   --wfui-secondary-hover  Secondary hover state
  *   --wfui-text-secondary   Text on secondary surfaces
- *   --wfui-error            Error state color
- *   --wfui-success          Success state color
- *   --wfui-info             Info state color
- *   --wfui-warning          Warning state color
  *   --wfui-disabled-bg      Disabled background
  *   --wfui-disabled-secondary Disabled secondary
  *   --wfui-disabled-text    Disabled text
@@ -33,11 +29,6 @@
   --wfui-secondary: #253f4c;
   --wfui-secondary-hover: #2c4351;
   --wfui-text-secondary: #ffffff;
-
-  --wfui-error: #d32f2f;
-  --wfui-success: #388e3c;
-  --wfui-info: #0288d1;
-  --wfui-warning: #f57c00;
 
   --wfui-disabled-bg: #bdbdbd;
   --wfui-disabled-secondary: #9e9e9e;

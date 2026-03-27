@@ -11,10 +11,6 @@ export interface WfuiThemeVars {
   '--wfui-secondary': string;
   '--wfui-secondary-hover': string;
   '--wfui-text-secondary': string;
-  '--wfui-error'?: string;
-  '--wfui-success'?: string;
-  '--wfui-info'?: string;
-  '--wfui-warning'?: string;
   '--wfui-disabled-bg'?: string;
   '--wfui-disabled-secondary'?: string;
   '--wfui-disabled-text'?: string;
@@ -29,10 +25,6 @@ export const THEME_VAR_KEYS = [
   '--wfui-secondary',
   '--wfui-secondary-hover',
   '--wfui-text-secondary',
-  '--wfui-error',
-  '--wfui-success',
-  '--wfui-info',
-  '--wfui-warning',
   '--wfui-disabled-bg',
   '--wfui-disabled-secondary',
   '--wfui-disabled-text',

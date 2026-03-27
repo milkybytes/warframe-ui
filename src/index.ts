@@ -2,10 +2,10 @@ export { default as Button } from './Button/Button';
 export type { ButtonProps } from './Button/Button';
 
 export { default as Input } from './Input/Input';
-export type { InputProps, InputVariant } from './Input/Input';
+export type { InputProps } from './Input/Input';
 
 export { default as TextArea } from './TextArea/TextArea';
-export type { TextAreaProps, TextAreaVariant } from './TextArea/TextArea';
+export type { TextAreaProps } from './TextArea/TextArea';
 
 export { default as Select } from './Select/Select';
 export type { SelectProps, SelectOption } from './Select/Select';

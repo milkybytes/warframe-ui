@@ -10,7 +10,7 @@ export default function TextAreaExample() {
     <section id="textarea" className={styles.section}>
       <h2 className={styles.sectionTitle}>TextArea</h2>
       <p className={styles.sectionDesc}>
-        Multi-line text input with variant support.
+        Multi-line text input.
       </p>
       <div className={styles.example}>
         <div className={styles.preview}>
