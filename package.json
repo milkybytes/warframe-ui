@@ -1,0 +1,54 @@
+{
+  "name": "@milkybytes/warframe-ui",
+  "version": "0.1.0",
+  "description": "Warframe-themed React UI components with CSS variable theming",
+  "license": "MIT",
+  "keywords": [
+    "react",
+    "warframe",
+    "ui",
+    "components",
+    "theming",
+    "css-variables"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/milkybytes/warframe-ui"
+  },
+  "main": "./dist/index.es.js",
+  "module": "./dist/index.es.js",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.es.js"
+    },
+    "./style.css": "./dist/style.css"
+  },
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "sideEffects": [
+    "**/*.css"
+  ],
+  "scripts": {
+    "build": "vite build",
+    "typecheck": "tsc --noEmit",
+    "demo": "cd demo && yarn dev",
+    "build:demo": "cd demo && yarn build"
+  },
+  "peerDependencies": {
+    "react": ">=17",
+    "react-dom": ">=17"
+  },
+  "devDependencies": {
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "@vitejs/plugin-react": "^4",
+    "react": "^18",
+    "react-dom": "^18",
+    "typescript": "^5",
+    "vite": "^5",
+    "vite-plugin-dts": "^3"
+  }
+}

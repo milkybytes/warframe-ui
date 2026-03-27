@@ -1,0 +1,120 @@
+.bracketIcon {
+  fill: var(--wfui-text-secondary);
+  height: 27px;
+}
+
+.sliderRow {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.sliderContainer {
+  position: relative;
+  width: 120px;
+  height: 4px;
+  display: flex;
+  align-items: center;
+  margin: 0 8px;
+}
+
+.value {
+  font-size: 18px;
+  color: var(--wfui-text);
+  min-width: 50px;
+  text-align: right;
+  flex-shrink: 0;
+}
+
+.sliderInput {
+  width: 100%;
+  height: 9px;
+  outline: none;
+  -webkit-appearance: none;
+  appearance: none;
+  cursor: pointer;
+  background: transparent;
+  outline: 2px solid rgba(from var(--wfui-primary) R G B / 0.45);
+  position: relative;
+  z-index: 10;
+  margin: 0;
+  padding: 0;
+  touch-action: none;
+}
+
+.sliderInput::-webkit-slider-track {
+  width: 100%;
+  height: 4px;
+  background: var(--wfui-secondary);
+  border: 1px solid var(--wfui-text-secondary);
+  border-radius: 2px;
+  box-sizing: border-box;
+}
+
+.sliderInput::-moz-range-track {
+  width: 100%;
+  height: 4px;
+  background: var(--wfui-secondary);
+  border: 1px solid var(--wfui-text-secondary);
+  border-radius: 2px;
+  box-sizing: border-box;
+}
+
+.sliderInput::-moz-focus-outer {
+  border: 0;
+}
+
+.sliderInput::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 2px;
+  height: 15px;
+  background: rgba(from var(--wfui-text-secondary) R G B / 0.5);
+  outline: 2px solid var(--wfui-text-secondary);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: all 0.2s ease;
+}
+
+.sliderInput::-webkit-slider-thumb:active {
+  transform: scale(1.1);
+}
+
+.sliderInput::-webkit-slider-thumb:hover {
+  background: var(--wfui-primary);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.sliderInput::-moz-range-thumb {
+  width: 12px;
+  height: 18px;
+  border-radius: 2px;
+  background: var(--wfui-primary);
+  border: 1px solid var(--wfui-bg);
+  cursor: grab;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: all 0.2s ease;
+}
+
+.sliderInput::-moz-range-thumb:active {
+  transform: scale(1.1);
+}
+
+.sliderInput::-moz-range-thumb:hover {
+  background: var(--wfui-primary);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.sliderInput:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.sliderInput:disabled::-webkit-slider-thumb {
+  cursor: not-allowed;
+  transform: none;
+}
+
+.sliderInput:disabled::-moz-range-thumb {
+  cursor: not-allowed;
+  transform: none;
+}

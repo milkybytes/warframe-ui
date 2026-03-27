@@ -1,0 +1,147 @@
+.selectWrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.select {
+  position: relative;
+  width: 100%;
+  min-width: 140px;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.875rem;
+  font-family: inherit;
+  color: rgba(from var(--wfui-text-secondary) R G B / 0.8);
+  background-color: var(--wfui-surface);
+  border: none;
+  border-radius: 0px;
+  cursor: pointer;
+  transition: color 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  user-select: none;
+  overflow: hidden;
+}
+
+.select::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: rgba(from var(--wfui-text-secondary) R G B / 0.3);
+  pointer-events: none;
+}
+
+.select::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 2px;
+  background-color: var(--wfui-primary);
+  transition: width 0.4s ease;
+  pointer-events: none;
+}
+
+.select:hover {
+  color: var(--wfui-primary);
+}
+
+.select:hover::after {
+  width: 100%;
+}
+
+.select:focus {
+  outline: none;
+  color: var(--wfui-primary);
+}
+
+.select:focus::after {
+  width: 100%;
+}
+
+.select.disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  background-color: var(--wfui-disabled-bg);
+  color: var(--wfui-disabled-text);
+}
+
+.select.disabled::before,
+.select.disabled::after {
+  display: none;
+}
+
+.select.error::before {
+  background-color: rgba(from var(--wfui-error) R G B / 0.5);
+}
+
+.select.error::after {
+  background-color: var(--wfui-error);
+}
+
+.select.open {
+  color: var(--wfui-primary);
+}
+
+.select.open::after {
+  width: 100%;
+}
+
+.selectValue {
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.select:not(.disabled):hover .selectArrow {
+  color: var(--wfui-primary);
+}
+
+.selectArrow {
+  font-size: 12px;
+  color: inherit;
+  transition: transform 0.2s, color 0.2s;
+  margin-left: 8px;
+  min-width: 12px;
+  text-align: center;
+  z-index: 2;
+  position: relative;
+}
+
+.optionsDropdown {
+  position: absolute;
+  top: calc(100%);
+  left: 0;
+  right: 0;
+  background-color: var(--wfui-secondary);
+  max-height: 250px;
+  overflow-y: auto;
+  z-index: 1000;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+}
+
+.option {
+  padding: 10px 12px;
+  font-size: 14px;
+  color: var(--wfui-text);
+  cursor: pointer;
+  transition: background-color 0.15s;
+}
+
+.option:hover {
+  background-color: var(--wfui-bg);
+}
+
+.errorText {
+  font-size: 12px;
+  color: #ef4444;
+  margin-top: 4px;
+}

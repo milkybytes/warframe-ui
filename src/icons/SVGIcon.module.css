@@ -1,0 +1,14 @@
+.SVGIcon {
+  fill: var(--wfui-text-secondary);
+  width: 24px;
+  height: 24px;
+  display: inline-block;
+}
+
+.SVGIcon[data-variant='primary'] {
+  fill: var(--wfui-primary);
+}
+
+.SVGIcon[data-disabled='true'] {
+  opacity: 0.5;
+}

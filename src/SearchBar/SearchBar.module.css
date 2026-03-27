@@ -1,0 +1,17 @@
+.searchContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: end;
+  justify-content: space-between;
+  gap: 10px;
+  border-radius: 8px;
+}
+
+.searchContainer > :first-child {
+  flex: 1;
+}
+
+.resultCount {
+  white-space: nowrap;
+}

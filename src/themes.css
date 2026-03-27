@@ -1,0 +1,139 @@
+/**
+ * Warframe UI | Theme & Base Styles
+ *
+ * Import this stylesheet to apply Warframe-themed CSS variables.
+ * Switch themes by setting [data-theme] on a parent element (e.g. <body>).
+ *
+ * Available themes: default, harrier, light, vitruvian, nidus, darklotus, lunar
+ *
+ * CSS variables:
+ *   --wfui-bg               Page background
+ *   --wfui-text             Text on background
+ *   --wfui-surface          Elevated surface color
+ *   --wfui-primary          Primary accent / brand color
+ *   --wfui-secondary        Secondary background (cards, inputs)
+ *   --wfui-secondary-hover  Secondary hover state
+ *   --wfui-text-secondary   Text on secondary surfaces
+ *   --wfui-error            Error state color
+ *   --wfui-success          Success state color
+ *   --wfui-info             Info state color
+ *   --wfui-warning          Warning state color
+ *   --wfui-disabled-bg      Disabled background
+ *   --wfui-disabled-secondary Disabled secondary
+ *   --wfui-disabled-text    Disabled text
+ *   --wfui-shadow           Default box-shadow
+ */
+
+/* ─── Default (Lotus) ──────────────────────────────────────────── */
+:root {
+  --wfui-bg: #1e3642;
+  --wfui-text: #ffffff;
+  --wfui-surface: #2c4351;
+  --wfui-primary: #e8d55d;
+  --wfui-secondary: #253f4c;
+  --wfui-secondary-hover: #2c4351;
+  --wfui-text-secondary: #ffffff;
+
+  --wfui-error: #d32f2f;
+  --wfui-success: #388e3c;
+  --wfui-info: #0288d1;
+  --wfui-warning: #f57c00;
+
+  --wfui-disabled-bg: #bdbdbd;
+  --wfui-disabled-secondary: #9e9e9e;
+  --wfui-disabled-text: #616161;
+
+  --wfui-shadow: rgba(0, 0, 0, 0.5) 2px 2px 4px;
+}
+
+/* ─── Harrier ──────────────────────────────────────────────────── */
+[data-theme='harrier'] {
+  --wfui-bg: #0a101c;
+  --wfui-text: #ffffff;
+  --wfui-surface: #151f2f;
+  --wfui-primary: #fe3500;
+  --wfui-secondary: #111926;
+  --wfui-secondary-hover: #151f2f;
+  --wfui-text-secondary: #ff8402;
+}
+
+/* ─── Light ────────────────────────────────────────────────────── */
+[data-theme='light'] {
+  --wfui-bg: #dcdcdc;
+  --wfui-text: #14291d;
+  --wfui-surface: white;
+  --wfui-primary: #b27d05;
+  --wfui-secondary: #fcfcfc;
+  --wfui-secondary-hover: white;
+  --wfui-text-secondary: #5f5f5f;
+}
+
+/* ─── Vitruvian ────────────────────────────────────────────────── */
+[data-theme='vitruvian'] {
+  --wfui-bg: #090810;
+  --wfui-text: #ffffff;
+  --wfui-surface: #18171f;
+  --wfui-primary: #f6e4c0;
+  --wfui-secondary: #121117;
+  --wfui-secondary-hover: #18171f;
+  --wfui-text-secondary: #beaa63;
+}
+
+/* ─── Nidus ────────────────────────────────────────────────────── */
+[data-theme='nidus'] {
+  --wfui-bg: #edebdc;
+  --wfui-text: #8f265e;
+  --wfui-surface: #fefed1;
+  --wfui-primary: #f64a60;
+  --wfui-secondary: #fefeda;
+  --wfui-secondary-hover: #fefed1;
+  --wfui-text-secondary: #8f265e;
+}
+
+/* ─── Dark Lotus ───────────────────────────────────────────────── */
+[data-theme='darklotus'] {
+  --wfui-bg: #190042;
+  --wfui-text: #fff1bf;
+  --wfui-surface: #2a0a5e;
+  --wfui-primary: #c8a9ed;
+  --wfui-secondary: #250953;
+  --wfui-secondary-hover: #2a0a5e;
+  --wfui-text-secondary: #8c7793;
+}
+
+/* ─── Lunar ────────────────────────────────────────────────────── */
+[data-theme='lunar'] {
+  --wfui-bg: #4e080a;
+  --wfui-text: #ec9699;
+  --wfui-surface: #5f1317;
+  --wfui-primary: #d3b84f;
+  --wfui-secondary: #5c1417;
+  --wfui-secondary-hover: #5f1317;
+  --wfui-text-secondary: #ffffff;
+}
+
+/* ─── Scrollbar ────────────────────────────────────────────────── */
+::-webkit-scrollbar {
+  width: 8px;
+  outline: 1px solid rgba(from var(--wfui-text) R G B / 0.1);
+}
+
+::-webkit-scrollbar-track {
+  background: var(--wfui-secondary-hover);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--wfui-text-secondary);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--wfui-primary);
+}
+
+::-webkit-scrollbar-thumb:active {
+  outline: 1px solid rgba(from var(--wfui-primary) R G B / 1);
+}
+
+::-webkit-scrollbar-track:active {
+  background: rgba(from var(--wfui-text) R G B / 0.5);
+}

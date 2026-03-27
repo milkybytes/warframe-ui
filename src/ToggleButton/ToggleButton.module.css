@@ -1,0 +1,79 @@
+.toggleButton {
+    display: flex;
+    align-items: stretch;
+    padding: 0;
+    background: transparent;
+    border: 1px solid rgba(from var(--wfui-primary) R G B / 0.3);
+    cursor: pointer;
+    transition: all 0.2s;
+    min-width: 80px;
+    height: 32px;
+    overflow: hidden;
+}
+
+.toggleButton:hover:not(:disabled) {
+    border-color: var(--wfui-primary);
+}
+
+.toggleButton:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.iconContainer {
+    flex: 0 0 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(from var(--wfui-text-secondary) R G B / 0.3);
+    transition: background 0.2s;
+}
+
+.toggleButton:hover:not(:disabled) .iconContainer .icon {
+    color: var(--wfui-primary);
+}
+
+.icon {
+    fill: var(--wfui-text-secondary);
+    transition: fill 0.2s;
+}
+
+.toggleButton:hover:not(:disabled) .icon {
+    fill: var(--wfui-primary);
+}
+
+.barsContainer {
+    flex: 0 0 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(from var(--wfui-secondary) R G B / 0.5);
+    transition: background 0.2s;
+}
+
+.menuIcon {
+    transform: rotate(90deg);
+    fill: rgba(from var(--wfui-text-secondary) R G B / 0.5);
+    transition: fill 0.2s;
+}
+
+.labelledToggle {
+    flex: 0 0 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(from var(--wfui-text-secondary) R G B / 0.1);
+    transition: all 0.2s;
+    color: rgba(from var(--wfui-text-secondary) R G B / 0.5);
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.labelledToggle.active {
+    background: rgba(from var(--wfui-text-secondary) R G B / 0.3);
+    color: var(--wfui-text-secondary);
+}
+
+.toggleButton:hover:not(:disabled) .labelledToggle {
+    color: var(--wfui-primary);
+}

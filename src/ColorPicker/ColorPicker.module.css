@@ -1,0 +1,32 @@
+.colorPicker {
+  width: 63px;
+  height: 27px;
+  background-size: 18px 18px;
+  background-position: 0 0, 9px 9px;
+  cursor: pointer;
+}
+
+.colorPicker:hover {
+  transform: scale(1.1);
+}
+
+.checkerboard {
+  background-image:
+    linear-gradient(45deg, #ffffff 25%, transparent 25%, transparent 75%, #ffffff 75%, #ffffff),
+    linear-gradient(45deg, #ffffff 25%, #808080 25%, #808080 75%, #ffffff 75%, #ffffff);
+}
+
+.square {
+  width: 27px;
+  height: 27px;
+}
+
+.active {
+  outline: 2px solid var(--wfui-primary);
+  outline-offset: 2px;
+
+  &:hover {
+    border: none;
+    outline-offset: 0px;
+  }
+}

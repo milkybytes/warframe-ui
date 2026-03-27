@@ -1,0 +1,41 @@
+.colorMenu {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  height: 100%;
+  align-items: flex-start;
+}
+
+.colorGrid {
+  display: grid;
+  grid-template-columns: repeat(var(--wfui-color-menu-columns, 5), 36px);
+  padding: 4px 8px 4px 4px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  flex-grow: 1;
+  width: fit-content;
+  align-content: start;
+}
+
+.colorCell {
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 2px;
+  transition:
+    transform 0.1s,
+    border-color 0.1s;
+}
+
+.colorCell:hover {
+  transform: scale(1.2);
+  border-color: var(--wfui-primary);
+  z-index: 1;
+}
+
+.colorCell[data-selected='true'] {
+  outline: 2px solid var(--wfui-primary);
+  outline-offset: -2px;
+  z-index: 1;
+}

@@ -1,0 +1,125 @@
+.textareaWrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.textarea {
+  position: relative;
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  border: none;
+  border-radius: 0;
+  box-sizing: border-box;
+  background: var(--wfui-surface);
+  color: rgba(from var(--wfui-text-secondary) R G B / 0.8);
+  font-size: 0.875rem;
+  font-family: inherit;
+  resize: vertical;
+  min-height: 100px;
+  caret-color: var(--wfui-text-secondary);
+  outline: 1px solid rgba(from var(--wfui-primary) R G B / 0.2);
+
+  &:disabled {
+    cursor: not-allowed;
+    background: var(--wfui-disabled-bg);
+    color: var(--wfui-disabled-text);
+    opacity: 0.6;
+  }
+
+  &::placeholder {
+    color: rgba(from var(--wfui-text-secondary) R G B / 0.6);
+  }
+
+  &:hover {
+    color: var(--wfui-primary);
+  }
+
+  &::-webkit-scrollbar {
+    cursor: default;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    cursor: default;
+  }
+
+  &:focus {
+    outline: 1px solid rgba(from var(--wfui-primary) R G B / 0.2);
+    color: var(--wfui-text-secondary);
+  }
+}
+
+.textareaWrapper:hover::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%) translateY(10%);
+  width: 120%;
+  height: 120%;
+  pointer-events: none;
+  background: radial-gradient(
+    ellipse at 50% 60%,
+    rgba(from var(--wfui-primary) R G B / 0.3) 0%,
+    rgba(from var(--wfui-primary) R G B / 0.2) 15%,
+    rgba(from var(--wfui-primary) R G B / 0.1) 35%,
+    transparent 60%
+  );
+  filter: blur(10px);
+  z-index: 1;
+}
+
+.bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: rgba(from var(--wfui-text-secondary) R G B / 0.3);
+  pointer-events: none;
+}
+
+.bottom::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 2px;
+  background-color: var(--wfui-primary);
+  transition: width 0.4s ease;
+}
+
+.textareaWrapper:hover .bottom::after {
+  width: 100%;
+}
+
+.textarea.surface {
+  color: var(--wfui-text-secondary);
+  background: var(--wfui-surface);
+}
+
+.textarea.error {
+  color: var(--wfui-error);
+  background: rgba(from var(--wfui-error) R G B / 0.1) !important;
+  outline-color: var(--wfui-error);
+}
+
+.textarea.success {
+  color: var(--wfui-success);
+  background: rgba(from var(--wfui-success) R G B / 0.1) !important;
+  outline-color: var(--wfui-success);
+}
+
+.textarea.warning {
+  color: var(--wfui-warning);
+  background: rgba(from var(--wfui-warning) R G B / 0.1) !important;
+  outline-color: var(--wfui-warning);
+}
+
+.textarea.info {
+  color: var(--wfui-info);
+  background: rgba(from var(--wfui-info) R G B / 0.1) !important;
+  outline-color: var(--wfui-info);
+}
