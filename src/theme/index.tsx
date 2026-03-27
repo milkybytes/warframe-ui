@@ -12,7 +12,6 @@ export interface WfuiThemeVars {
   '--wfui-secondary-hover': string;
   '--wfui-text-secondary': string;
   '--wfui-disabled-bg'?: string;
-  '--wfui-disabled-secondary'?: string;
   '--wfui-disabled-text'?: string;
   '--wfui-shadow'?: string;
 }
@@ -26,7 +25,6 @@ export const THEME_VAR_KEYS = [
   '--wfui-secondary-hover',
   '--wfui-text-secondary',
   '--wfui-disabled-bg',
-  '--wfui-disabled-secondary',
   '--wfui-disabled-text',
   '--wfui-shadow',
 ] as const;
