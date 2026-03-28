@@ -13,8 +13,6 @@ import ColorMenuExample from './examples/ColorMenuExample';
 import ItemCardExample from './examples/ItemCardExample';
 import ThemingExample from './examples/ThemingExample';
 
-const THEMES = ['default', 'harrier', 'light', 'vitruvian', 'nidus', 'darklotus', 'lunar'] as const;
-
 const SECTIONS = [
   { id: 'button', label: 'Button' },
   { id: 'input', label: 'Input' },
@@ -49,17 +47,16 @@ export default function App() {
           <p className={styles.subtitle}>
             Warframe-themed React UI component library with built-in themes.
           </p>
-          <div className={styles.themeSelector}>
-            <label>Theme:</label>
-            {THEMES.map((t) => (
-              <button
-                key={t}
-                className={`${styles.themeButton} ${theme === t ? styles.active : ''}`}
-                onClick={() => setTheme(t)}
-              >
-                {t}
-              </button>
-            ))}
+          <div className={styles.badges}>
+            <a href="https://github.com/milkybytes/warframe-ui/actions/workflows/main.yml" target="_blank" rel="noreferrer">
+              <img src="https://github.com/milkybytes/warframe-ui/actions/workflows/main.yml/badge.svg" alt="Deploy Demo" />
+            </a>
+            <a href="https://www.npmjs.com/package/@milkybytes/warframe-ui" target="_blank" rel="noreferrer">
+              <img src="https://img.shields.io/npm/v/@milkybytes/warframe-ui" alt="npm" />
+            </a>
+            <a href="https://github.com/milkybytes/warframe-ui/blob/main/LICENSE" target="_blank" rel="noreferrer">
+              <img src="https://img.shields.io/github/license/milkybytes/warframe-ui" alt="license" />
+            </a>
           </div>
         </header>
 
@@ -73,7 +70,7 @@ export default function App() {
         <ColorPickerExample />
         <ColorMenuExample />
         <ItemCardExample />
-        <ThemingExample />
+        <ThemingExample theme={theme} onThemeChange={setTheme} />
 
         <footer className={styles.footer}>MIT License</footer>
       </main>
