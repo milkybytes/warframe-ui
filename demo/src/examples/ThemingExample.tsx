@@ -30,19 +30,19 @@ function ThemeConsumer() {
                 ))}
             </div>
             <Input placeholder="Themed input" value={inputValue} onChange={(e) => setInputValue(e.target.value)} />
-            <div className={styles.row} style={{ gap: '0.5rem' }}>
+            <div className={styles.row} style={{ gap: '0.5rem', display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
                 {['--wfui-bg', '--wfui-primary', '--wfui-surface', '--wfui-text-secondary'].map((k) => (
-                    <div key={k} style={{ textAlign: 'center' }}>
+                    <div key={k} style={{ textAlign: 'center', display: 'flex', flexDirection: 'row', alignItems: 'center', gap: '0.25rem' }}>
                         <div
                             style={{
-                                width: 36,
-                                height: 36,
+                                width: 24,
+                                height: 24,
                                 borderRadius: 4,
                                 backgroundColor: vars[k] || 'transparent',
                                 border: '1px solid rgba(255,255,255,0.15)',
                             }}
                         />
-                        <span className={styles.caption}>{k.replace('--wfui-', '')}</span>
+                        <span className={styles.caption}>{k}</span>
                     </div>
                 ))}
             </div>

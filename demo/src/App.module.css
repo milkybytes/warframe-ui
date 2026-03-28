@@ -65,7 +65,6 @@
 
 .subtitle {
   margin-top: 0.5rem;
-  color: rgba(from var(--wfui-text) R G B / 0.55);
   line-height: 1.6;
 }
 
@@ -148,9 +147,7 @@
 }
 
 .codeBlock {
-  flex: 1 1 300px;
   min-width: 0;
-  overflow: hidden;
   padding: 1rem 1.25rem;
   background: #011627;
   border: 1px solid rgba(255, 255, 255, 0.08);
@@ -161,7 +158,8 @@
   font-family: 'SF Mono', 'Fira Code', 'Cascadia Code', monospace;
 
   >pre {
-    overflow-x: auto;
+    width: max-content;
+    min-width: 100%;
   }
 }
 
@@ -191,7 +189,6 @@
 
 .caption {
   font-size: 0.8rem;
-  color: rgba(from var(--wfui-text) R G B / 0.4);
   margin-top: 0.25rem;
 }
 
