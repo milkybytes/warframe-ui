@@ -8,6 +8,7 @@
   color: rgba(from var(--wfui-text-secondary) R G B / 0.8);
   font-family: Roboto, helvetica, arial, sans-serif;
   font-size: 1rem;
+  font-weight: 900;;
   outline: none;
   border: none;
   text-transform: uppercase;
@@ -40,25 +41,17 @@
   bottom: 0;
   left: 50%;
   transform: translateX(-50%) translateY(10%);
-  width: 120%;
-  height: 120%;
+  width: 200%;
+  height: 100%;
   pointer-events: none;
   background: radial-gradient(
-    ellipse at 50% 60%,
-    rgba(from var(--wfui-primary) R G B / 0.3) 0%,
-    rgba(from var(--wfui-primary) R G B / 0.2) 15%,
-    rgba(from var(--wfui-primary) R G B / 0.1) 35%,
-    transparent 60%
+    ellipse at 50% 100%,
+    rgba(from var(--wfui-primary) R G B / 0.8) 0%,
+    rgba(from var(--wfui-primary) R G B / 0.45) 20%,
+    rgba(from var(--wfui-primary) R G B / 0.2) 35%,
+    transparent 75%
   );
-  filter: blur(10px);
   z-index: 1;
-}
-
-.border {
-  position: absolute;
-  background-color: var(--wfui-primary);
-  transition: all 0.4s ease;
-  pointer-events: none;
 }
 
 .bottom {
@@ -77,8 +70,8 @@
   transform: translateX(-50%);
   width: 0;
   height: 2px;
-  background-color: var(--wfui-primary);
-  transition: width 0.4s ease;
+  background: var(--wfui-primary);
+  transition: width 0.15s ease;
 }
 
 .button:not(:disabled):hover .bottom::after {

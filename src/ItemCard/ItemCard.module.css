@@ -55,10 +55,10 @@
     position: absolute;
     top: 0;
     right: 0;
-    width: 0;
-    height: 0;
-    border-top: 32px solid var(--wfui-primary);
-    border-left: 32px solid transparent;
+    width: 12%;
+    height: 12%;
+    background: var(--wfui-primary);
+    clip-path: polygon(100% 0%, 0% 0%, 100% 100%);
     z-index: 1;
   }
 }

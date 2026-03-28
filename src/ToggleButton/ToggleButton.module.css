@@ -62,18 +62,18 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: rgba(from var(--wfui-text-secondary) R G B / 0.1);
     transition: all 0.2s;
-    color: rgba(from var(--wfui-text-secondary) R G B / 0.5);
+    background: rgba(from var(--wfui-secondary) R G B / 0.5);
     font-weight: 500;
     font-size: 14px;
+    color: var(--wfui-text-secondary);
 }
 
 .labelledToggle.active {
     background: rgba(from var(--wfui-text-secondary) R G B / 0.3);
-    color: var(--wfui-text-secondary);
+    color: rgba(from var(--wfui-text-secondary) R G B / 0.5);
 }
 
-.toggleButton:hover:not(:disabled) .labelledToggle {
+.toggleButton:hover > .active {
     color: var(--wfui-primary);
 }
