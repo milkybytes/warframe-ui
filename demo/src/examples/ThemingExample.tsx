@@ -61,9 +61,7 @@ registerTheme('corpus', {
     '--wfui-text-secondary': '#7ec8e3',
 });
 
-export default function ThemingExample() {
-    const [controlledTheme, setControlledTheme] = useState('default');
-
+export default function ThemingExample({ theme, onThemeChange }: { theme: string; onThemeChange: (t: string) => void }) {
     return (
         <section id="theming" className={styles.section}>
             <h2 className={styles.sectionTitle}>Theming</h2>
@@ -91,7 +89,7 @@ export default function ThemingExample() {
             <h3 className={styles.subTitle}>WfuiProvider + useWfuiTheme</h3>
             <div className={styles.example} style={{ flexDirection: 'column' }}>
                 <div className={styles.preview}>
-                    <WfuiProvider theme={controlledTheme} onThemeChange={setControlledTheme}>
+                    <WfuiProvider theme={theme} onThemeChange={onThemeChange}>
                         <ThemeConsumer />
                     </WfuiProvider>
                 </div>

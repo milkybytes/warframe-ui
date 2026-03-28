@@ -1,6 +1,8 @@
 # warframe-ui
 
 [![Deploy Demo](https://github.com/milkybytes/warframe-ui/actions/workflows/main.yml/badge.svg)](https://github.com/milkybytes/warframe-ui/actions/workflows/main.yml)
+[![npm](https://img.shields.io/npm/v/@milkybytes/warframe-ui)](https://www.npmjs.com/package/@milkybytes/warframe-ui)
+[![license](https://img.shields.io/github/license/milkybytes/warframe-ui)](./LICENSE)
 
 Warframe-themed React UI component library.
 
