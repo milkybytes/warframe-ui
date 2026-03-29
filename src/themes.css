@@ -35,48 +35,19 @@
   --wfui-shadow: rgba(0, 0, 0, 0.5) 2px 2px 4px;
 }
 
-/* ─── Harrier ──────────────────────────────────────────────────── */
-[data-theme='harrier'] {
-  --wfui-bg: #0a101c;
-  --wfui-text: #ffffff;
-  --wfui-surface: #151f2f;
-  --wfui-primary: #fe3500;
-  --wfui-secondary: #111926;
-  --wfui-secondary-hover: #151f2f;
-  --wfui-text-secondary: #ff8402;
+/* ─── Baruuk ──────────────────────────────────────────────────── */
+[data-theme='baruuk'] {
+
 }
 
-/* ─── Light ────────────────────────────────────────────────────── */
-[data-theme='light'] {
-  --wfui-bg: #dcdcdc;
-  --wfui-text: #14291d;
-  --wfui-surface: white;
-  --wfui-primary: #b27d05;
-  --wfui-secondary: #fcfcfc;
-  --wfui-secondary-hover: white;
-  --wfui-text-secondary: #5f5f5f;
+/* ─── Conquera ──────────────────────────────────────────────────── */
+[data-theme='conquera'] {
+
 }
 
-/* ─── Vitruvian ────────────────────────────────────────────────── */
-[data-theme='vitruvian'] {
-  --wfui-bg: #090810;
-  --wfui-text: #ffffff;
-  --wfui-surface: #18171f;
-  --wfui-primary: #f6e4c0;
-  --wfui-secondary: #121117;
-  --wfui-secondary-hover: #18171f;
-  --wfui-text-secondary: #beaa63;
-}
+/* ─── Corpus ──────────────────────────────────────────────────── */
+[data-theme='corpus'] {
 
-/* ─── Nidus ────────────────────────────────────────────────────── */
-[data-theme='nidus'] {
-  --wfui-bg: #edebdc;
-  --wfui-text: #8f265e;
-  --wfui-surface: #fefed1;
-  --wfui-primary: #f64a60;
-  --wfui-secondary: #fefeda;
-  --wfui-secondary-hover: #fefed1;
-  --wfui-text-secondary: #8f265e;
 }
 
 /* ─── Dark Lotus ───────────────────────────────────────────────── */
@@ -90,7 +61,33 @@
   --wfui-text-secondary: #8c7793;
 }
 
-/* ─── Lunar ────────────────────────────────────────────────────── */
+/* ─── Deadlock ──────────────────────────────────────────────────── */
+[data-theme='deadlock'] {
+
+}
+
+/* ─── Equinox ──────────────────────────────────────────────────── */
+[data-theme='equinox'] {
+
+}
+
+
+/* ─── Fortuna ──────────────────────────────────────────────────── */
+[data-theme='fortuna'] {
+
+}
+
+/* ─── Grineer ──────────────────────────────────────────────────── */
+[data-theme='grineer'] {
+
+}
+
+/* ─── Legacy ──────────────────────────────────────────────────── */
+[data-theme='legacy'] {
+
+}
+
+/* ─── Lunar Renewal ────────────────────────────────────────────────────── */
 [data-theme='lunar'] {
   --wfui-bg: #4e080a;
   --wfui-text: #ec9699;
@@ -99,6 +96,64 @@
   --wfui-secondary: #5c1417;
   --wfui-secondary-hover: #5f1317;
   --wfui-text-secondary: #ffffff;
+}
+
+/* ─── Pom-2 ──────────────────────────────────────────────────── */
+[data-theme='pom2'] {
+
+}
+
+/* ─── Stalker ──────────────────────────────────────────────────── */
+[data-theme='stalker'] {
+
+}
+
+/* ─── Vitruvian ────────────────────────────────────────────────── */
+[data-theme='vitruvian'] {
+  --wfui-bg: #090810;
+  --wfui-text: #ffffff;
+  --wfui-surface: #18171f;
+  --wfui-primary: #f6e4c0;
+  --wfui-secondary: #121117;
+  --wfui-secondary-hover: #18171f;
+  --wfui-text-secondary: #beaa63;
+}
+
+/* ─── Zephyr Harrier ──────────────────────────────────────────────────── */
+[data-theme='harrier'] {
+  --wfui-bg: #0a101c;
+  --wfui-text: #ffffff;
+  --wfui-surface: #151f2f;
+  --wfui-primary: #fe3500;
+  --wfui-secondary: #111926;
+  --wfui-secondary-hover: #151f2f;
+  --wfui-text-secondary: #ff8402;
+}
+
+/* ─── Nidus ────────────────────────────────────────────────────── */
+[data-theme='nidus'] {
+  --wfui-bg: #edebdc;
+  --wfui-text: #8f265e;
+  --wfui-surface: #fefed1;
+  --wfui-primary: #f64a60;
+  --wfui-secondary: #fefeda;
+  --wfui-secondary-hover: #fefed1;
+  --wfui-text-secondary: #8f265e;
+}
+
+/* ─── Tenno ────────────────────────────────────────────────────── */
+[data-theme='tenno'] {
+
+}
+
+/* ─── Orokin ────────────────────────────────────────────────────── */
+[data-theme='orokin'] {
+
+}
+
+/* ─── High Contrast ────────────────────────────────────────────────────── */
+[data-theme='highcontrast'] {
+
 }
 
 /* ─── Scrollbar ────────────────────────────────────────────────── */

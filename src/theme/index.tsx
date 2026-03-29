@@ -31,18 +31,29 @@ export const THEME_VAR_KEYS = [
 
 export const BUILTIN_THEMES = [
   'default',
-  'harrier',
-  'light',
-  'vitruvian',
-  'nidus',
+  'baruuk',
+  'conquera',
+  'corpus',
   'darklotus',
+  'deadlock',
+  'equinox',
+  'fortuna',
+  'grineer',
+  'legacy',
   'lunar',
+  'pom2',
+  'stalker',
+  'vitruvian',
+  'harrier',
+  'nidus',
+  'tenno',
+  'orokin',
+  'highcontrast'
 ] as const;
 
 export type BuiltinTheme = (typeof BUILTIN_THEMES)[number];
 
 /* ── Runtime custom theme registration ─────────────────────────── */
-
 let styleEl: HTMLStyleElement | null = null;
 const customThemes = new Map<string, WfuiThemeVars>();
 
