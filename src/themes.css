@@ -38,19 +38,35 @@
 /* ─── Baruuk ──────────────────────────────────────────────────── */
 [data-theme='baruuk'] {
   --wfui-bg: #282520;
-  --wfui-text: #fff1bf;
-  --wfui-surface: #464137;
+  --wfui-text: #EEC169;
+  --wfui-surface: #2E2D28;
   --wfui-primary: #ECD3A2;
   --wfui-secondary: #383530;
-  --wfui-secondary-hover: #464137;
+  --wfui-secondary-hover: #2E2D28;
   --wfui-text-secondary: #EEC169;
 }
 
 /* ─── Conquera ──────────────────────────────────────────────────── */
-[data-theme='conquera'] {}
+[data-theme='conquera'] {
+  --wfui-bg: #B634BA;
+  --wfui-text: #FFFFFF;
+  --wfui-surface: #BC3FBF;
+  --wfui-primary: #FFF1BF;
+  --wfui-secondary: #C43DC7;
+  --wfui-secondary-hover: #BC3FBF;
+  --wfui-text-secondary: #FFFFFF;
+}
 
 /* ─── Corpus ──────────────────────────────────────────────────── */
-[data-theme='corpus'] {}
+[data-theme='corpus'] {
+  --wfui-bg: #070C12;
+  --wfui-text: #35BFE4;
+  --wfui-surface: #0A1727;
+  --wfui-primary: #6AE7F9;
+  --wfui-secondary: #040505;
+  --wfui-secondary-hover: #0A1727;
+  --wfui-text-secondary: #35BFE4;
+}
 
 /* ─── Dark Lotus ───────────────────────────────────────────────── */
 [data-theme='darklotus'] {
