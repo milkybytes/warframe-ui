@@ -8,6 +8,16 @@ Warframe-themed React UI component library.
 
 **[Live Demo and Examples](https://milkybytes.github.io/warframe-ui/)**
 
+## Installation
+
+```bash
+npm install @milkybytes/warframe-ui
+# or
+yarn add @milkybytes/warframe-ui
+# or
+pnpm add @milkybytes/warframe-ui
+```
+
 ## About
 
 These are some components I've designed for a (unreleased at this time) personal project. They're meant to resemble the Warframe in-game UI as closely as possible. I've pulled them out of that project and decided to make the work I've done on them public.
