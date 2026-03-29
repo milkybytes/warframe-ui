@@ -23,7 +23,7 @@ function ThemeConsumer() {
                 Active theme: <strong style={{ color: vars['--wfui-primary'] }}>{theme}</strong>
             </p>
             <div className={styles.row}>
-                {[...BUILTIN_THEMES, 'corpus'].map((t) => (
+                {[...BUILTIN_THEMES, 'custom example'].map((t) => (
                     <Button key={t} onClick={() => setTheme(t)}>
                         {t}
                     </Button>
@@ -50,8 +50,8 @@ function ThemeConsumer() {
     );
 }
 
-/* ── Register a custom "corpus" theme so the demo can switch to it ─ */
-registerTheme('corpus', {
+/* ── Register a custom "custom example" theme so the demo can switch to it ─ */
+registerTheme('custom example', {
     '--wfui-bg': '#0a1628',
     '--wfui-text': '#b0d4f1',
     '--wfui-surface': '#0f2035',
@@ -150,14 +150,14 @@ function MyComponent() {
             <div className={styles.example} style={{ flexDirection: 'column' }}>
                 <div className={styles.preview}>
                     <p className={styles.sectionDesc} style={{ marginBottom: 0 }}>
-                        Click <strong>corpus</strong> above to see the custom theme in action.
+                        Click <strong>Custom</strong> button above to see the custom theme in action.
                     </p>
                 </div>
                 <Code>{`import { registerTheme } from '@milkybytes/warframe-ui';
 import type { WfuiThemeVars } from '@milkybytes/warframe-ui';
 
 // Register once (e.g. at app startup)
-registerTheme('corpus', {
+registerTheme('custom example', {
   '--wfui-bg': '#0a1628',
   '--wfui-text': '#b0d4f1',
   '--wfui-surface': '#0f2035',
@@ -169,7 +169,7 @@ registerTheme('corpus', {
 
 // Then activate via data-theme or the hook:
 const { setTheme } = useWfuiTheme();
-setTheme('corpus');`}</Code>
+setTheme('custom example');`}</Code>
             </div>
         </section>
     );
