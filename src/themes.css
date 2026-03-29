@@ -19,7 +19,7 @@
  *   --wfui-shadow           Default box-shadow
  */
 
-/* ─── Default (Lotus) ──────────────────────────────────────────── */
+/* ─── Default (Legacy) ──────────────────────────────────────────── */
 :root {
   --wfui-bg: #1e3642;
   --wfui-text: #ffffff;
@@ -37,18 +37,20 @@
 
 /* ─── Baruuk ──────────────────────────────────────────────────── */
 [data-theme='baruuk'] {
-
+  --wfui-bg: #282520;
+  --wfui-text: #fff1bf;
+  --wfui-surface: #464137;
+  --wfui-primary: #ECD3A2;
+  --wfui-secondary: #383530;
+  --wfui-secondary-hover: #464137;
+  --wfui-text-secondary: #EEC169;
 }
 
 /* ─── Conquera ──────────────────────────────────────────────────── */
-[data-theme='conquera'] {
-
-}
+[data-theme='conquera'] {}
 
 /* ─── Corpus ──────────────────────────────────────────────────── */
-[data-theme='corpus'] {
-
-}
+[data-theme='corpus'] {}
 
 /* ─── Dark Lotus ───────────────────────────────────────────────── */
 [data-theme='darklotus'] {
@@ -62,30 +64,18 @@
 }
 
 /* ─── Deadlock ──────────────────────────────────────────────────── */
-[data-theme='deadlock'] {
-
-}
+[data-theme='deadlock'] {}
 
 /* ─── Equinox ──────────────────────────────────────────────────── */
-[data-theme='equinox'] {
-
-}
+[data-theme='equinox'] {}
 
 
 /* ─── Fortuna ──────────────────────────────────────────────────── */
-[data-theme='fortuna'] {
-
-}
+[data-theme='fortuna'] {}
 
 /* ─── Grineer ──────────────────────────────────────────────────── */
-[data-theme='grineer'] {
+[data-theme='grineer'] {}
 
-}
-
-/* ─── Legacy ──────────────────────────────────────────────────── */
-[data-theme='legacy'] {
-
-}
 
 /* ─── Lunar Renewal ────────────────────────────────────────────────────── */
 [data-theme='lunar'] {
@@ -99,14 +89,10 @@
 }
 
 /* ─── Pom-2 ──────────────────────────────────────────────────── */
-[data-theme='pom2'] {
-
-}
+[data-theme='pom2'] {}
 
 /* ─── Stalker ──────────────────────────────────────────────────── */
-[data-theme='stalker'] {
-
-}
+[data-theme='stalker'] {}
 
 /* ─── Vitruvian ────────────────────────────────────────────────── */
 [data-theme='vitruvian'] {
@@ -130,6 +116,16 @@
   --wfui-text-secondary: #ff8402;
 }
 
+[data-theme='lotus'] {
+  --wfui-bg: #1e3642;
+  --wfui-text: #ffffff;
+  --wfui-surface: #2c4351;
+  --wfui-primary: #FFF1BF;
+  --wfui-secondary: #253f4c;
+  --wfui-secondary-hover: #2c4351;
+  --wfui-text-secondary: #ffffff;
+}
+
 /* ─── Nidus ────────────────────────────────────────────────────── */
 [data-theme='nidus'] {
   --wfui-bg: #edebdc;
@@ -142,19 +138,13 @@
 }
 
 /* ─── Tenno ────────────────────────────────────────────────────── */
-[data-theme='tenno'] {
-
-}
+[data-theme='tenno'] {}
 
 /* ─── Orokin ────────────────────────────────────────────────────── */
-[data-theme='orokin'] {
-
-}
+[data-theme='orokin'] {}
 
 /* ─── High Contrast ────────────────────────────────────────────────────── */
-[data-theme='highcontrast'] {
-
-}
+[data-theme='highcontrast'] {}
 
 /* ─── Scrollbar ────────────────────────────────────────────────── */
 ::-webkit-scrollbar {
