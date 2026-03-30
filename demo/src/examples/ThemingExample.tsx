@@ -39,7 +39,7 @@ function ThemeConsumer() {
                     </tr>
                 </thead>
                 <tbody>
-                    {['--wfui-bg', '--wfui-text', '--wfui-accent', '--wfui-surface-alt', '--wfui-surface-alt-hover', '--wfui-surface', '--wfui-text-interactive'].map((k, i) => (
+                    {['--wfui-bg', '--wfui-text', '--wfui-accent', '--wfui-surface', '--wfui-text-interactive'].map((k, i) => (
                         <tr key={k} style={{ background: i % 2 === 0 ? 'rgba(255,255,255,0.03)' : 'transparent', borderBottom: '1px solid rgba(255,255,255,0.04)' }}>
                             <td style={{ padding: '0.2rem 0.5rem' }}>
                                 <div
@@ -68,8 +68,6 @@ registerTheme('custom example', {
     '--wfui-text': '#b0d4f1',
     '--wfui-surface': '#0f2035',
     '--wfui-accent': '#36a3d9',
-    '--wfui-surface-alt': '#0c1a2e',
-    '--wfui-surface-alt-hover': '#0f2035',
     '--wfui-text-interactive': '#7ec8e3',
 });
 
@@ -169,13 +167,12 @@ function MyComponent() {
 import type { WfuiThemeVars } from '@milkybytes/warframe-ui';
 
 // Register once (e.g. at app startup)
+// surface-alt and surface-alt-hover are auto-derived from surface + bg
 registerTheme('custom example', {
   '--wfui-bg': '#0a1628',
   '--wfui-text': '#b0d4f1',
   '--wfui-surface': '#0f2035',
   '--wfui-accent': '#36a3d9',
-  '--wfui-surface-alt': '#0c1a2e',
-  '--wfui-surface-alt-hover': '#0f2035',
   '--wfui-text-interactive': '#7ec8e3',
 });
 

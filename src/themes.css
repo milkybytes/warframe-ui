@@ -11,8 +11,6 @@
  *   --wfui-text               Page-content text, subheaders, descriptions, etc.
  *   --wfui-surface            Control surface (buttons, inputs, selects)
  *   --wfui-accent             Interactive highlight (hover text, active borders, glows)
- *   --wfui-surface-alt        Alternate surface (cards, panels, tracks)
- *   --wfui-surface-alt-hover  Alternate surface hover state
  *   --wfui-text-interactive   Resting text/icon color for interactive elements
  *   --wfui-disabled-bg        Disabled background
  *   --wfui-disabled-text      Disabled text
@@ -25,8 +23,7 @@
   --wfui-text: #ffffff;
   --wfui-surface: #2c4351;
   --wfui-accent: #e8d55d;
-  --wfui-surface-alt: #253f4c;
-  --wfui-surface-alt-hover: #2c4351;
+  --wfui-surface-alt: color-mix(in oklch, var(--wfui-surface) 75%, var(--wfui-bg));
   --wfui-text-interactive: #ffffff;
 
   --wfui-disabled-bg: #bdbdbd;
@@ -41,8 +38,6 @@
   --wfui-text: #EEC169;
   --wfui-surface: #2E2D28;
   --wfui-accent: #ECD3A2;
-  --wfui-surface-alt: #383530;
-  --wfui-surface-alt-hover: #2E2D28;
   --wfui-text-interactive: #EEC169;
 }
 
@@ -52,8 +47,6 @@
   --wfui-text: #FFFFFF;
   --wfui-surface: #BC3FBF;
   --wfui-accent: #FFF1BF;
-  --wfui-surface-alt: #C43DC7;
-  --wfui-surface-alt-hover: #BC3FBF;
   --wfui-text-interactive: #FFFFFF;
 }
 
@@ -63,8 +56,6 @@
   --wfui-text: #35BFE4;
   --wfui-surface: #0A1727;
   --wfui-accent: #6AE7F9;
-  --wfui-surface-alt: #040505;
-  --wfui-surface-alt-hover: #0A1727;
   --wfui-text-interactive: #35BFE4;
 }
 
@@ -74,8 +65,6 @@
   --wfui-text: #fff1bf;
   --wfui-surface: #2a0a5e;
   --wfui-accent: #c8a9ed;
-  --wfui-surface-alt: #250953;
-  --wfui-surface-alt-hover: #2a0a5e;
   --wfui-text-interactive: #8c7793;
 }
 
@@ -85,8 +74,6 @@
   --wfui-text: #D9CFB4;
   --wfui-surface: #1A213B;
   --wfui-accent: #E9D06B;
-  --wfui-surface-alt: #212940;
-  --wfui-surface-alt-hover: #1F273E;
   --wfui-text-interactive: #FFFFFF;
 }
 
@@ -96,8 +83,6 @@
   --wfui-text: #FFFFFF;
   --wfui-surface: #0E040C;
   --wfui-accent: #FFFFFF;
-  --wfui-surface-alt: #0E070E;
-  --wfui-surface-alt-hover: #0E040D;
   --wfui-text-interactive: #9F9EA4;
 }
 
@@ -108,8 +93,6 @@
   --wfui-text: #74A9D1;
   --wfui-surface: #030615;
   --wfui-accent: #FE72DD;
-  --wfui-surface-alt: #04091D;
-  --wfui-surface-alt-hover: #05081B;
   --wfui-text-interactive: #4469C2;
 }
 
@@ -119,8 +102,6 @@
   --wfui-text: #F8BD63;
   --wfui-surface: #071812;
   --wfui-accent: #F7DF9F;
-  --wfui-surface-alt: #111B12;
-  --wfui-surface-alt-hover: #091A14;
   --wfui-text-interactive: #FFBB6A;
 }
 
@@ -131,8 +112,6 @@
   --wfui-text: #ec9699;
   --wfui-surface: #5f1317;
   --wfui-accent: #d3b84f;
-  --wfui-surface-alt: #5c1417;
-  --wfui-surface-alt-hover: #5f1317;
   --wfui-text-interactive: #ffffff;
 }
 
@@ -142,8 +121,6 @@
   --wfui-text: #FFFFFF;
   --wfui-surface: #011F17;
   --wfui-accent: #05C732;
-  --wfui-surface-alt: #07271C;
-  --wfui-surface-alt-hover: #05261B;
   --wfui-text-interactive: #86E5A1;
 }
 
@@ -153,8 +130,6 @@
   --wfui-text: #9A201F;
   --wfui-surface: #080405;
   --wfui-accent: #FA3F38;
-  --wfui-surface-alt: #0C0402;
-  --wfui-surface-alt-hover: #0E0604;
   --wfui-text-interactive: #9A201F;
 }
 
@@ -164,8 +139,6 @@
   --wfui-text: #ffffff;
   --wfui-surface: #18171f;
   --wfui-accent: #f6e4c0;
-  --wfui-surface-alt: #121117;
-  --wfui-surface-alt-hover: #18171f;
   --wfui-text-interactive: #beaa63;
 }
 
@@ -175,8 +148,6 @@
   --wfui-text: #ffffff;
   --wfui-surface: #151f2f;
   --wfui-accent: #fe3500;
-  --wfui-surface-alt: #111926;
-  --wfui-surface-alt-hover: #151f2f;
   --wfui-text-interactive: #ff8402;
 }
 
@@ -185,8 +156,6 @@
   --wfui-text: #ffffff;
   --wfui-surface: #2c4351;
   --wfui-accent: #FFF1BF;
-  --wfui-surface-alt: #253f4c;
-  --wfui-surface-alt-hover: #2c4351;
   --wfui-text-interactive: #ffffff;
 }
 
@@ -196,8 +165,6 @@
   --wfui-text: #8B2564;
   --wfui-surface: #F8F7DB;
   --wfui-accent: #F84A63;
-  --wfui-surface-alt: #EFEDD8;
-  --wfui-surface-alt-hover: #F5F1D8;
   --wfui-text-interactive: #8B2564;
 }
 
@@ -207,8 +174,6 @@
   --wfui-text: #0D4E6C;
   --wfui-surface: #CFE7E9;
   --wfui-accent: #076A4D;
-  --wfui-surface-alt: #D1E5E6;
-  --wfui-surface-alt-hover: #CBE3E5;
   --wfui-text-interactive: #0D4E6C;
 }
 
@@ -218,8 +183,6 @@
   --wfui-text: #484212;
   --wfui-surface: #EEF7F6;
   --wfui-accent: #AE7B08;
-  --wfui-surface-alt: #ECF0F1;
-  --wfui-surface-alt-hover: #E8EEEE;
   --wfui-text-interactive: #13271E;
 }
 
@@ -229,8 +192,6 @@
   --wfui-text: #EE9C76;
   --wfui-surface: #12203D;
   --wfui-accent: #FFFF1B;
-  --wfui-surface-alt: #122341;
-  --wfui-surface-alt-hover: #122140;
   --wfui-text-interactive: #67B0FD;
 }
 
@@ -241,7 +202,7 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--wfui-surface-alt-hover);
+  background: var(--wfui-surface);
 }
 
 ::-webkit-scrollbar-thumb {

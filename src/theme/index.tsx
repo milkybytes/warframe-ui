@@ -8,8 +8,6 @@ export interface WfuiThemeVars {
   '--wfui-text': string;
   '--wfui-surface': string;
   '--wfui-accent': string;
-  '--wfui-surface-alt': string;
-  '--wfui-surface-alt-hover': string;
   '--wfui-text-interactive': string;
   '--wfui-disabled-bg'?: string;
   '--wfui-disabled-text'?: string;
@@ -21,8 +19,6 @@ export const THEME_VAR_KEYS = [
   '--wfui-text',
   '--wfui-surface',
   '--wfui-accent',
-  '--wfui-surface-alt',
-  '--wfui-surface-alt-hover',
   '--wfui-text-interactive',
   '--wfui-disabled-bg',
   '--wfui-disabled-text',
@@ -155,6 +151,10 @@ export function WfuiProvider({ theme: controlledTheme, onThemeChange, children }
   useEffect(() => {
     if (controlledTheme !== undefined) setInternalTheme(controlledTheme);
   }, [controlledTheme]);
+
+  useEffect(() => {
+    document.documentElement.setAttribute('data-theme', theme === 'default' ? '' : theme);
+  }, [theme]);
 
   const value = useMemo(() => ({ theme, setTheme, containerRef }), [theme, setTheme]);
 

@@ -18,7 +18,7 @@
   align-items: center;
 
   &:hover {
-    background-color: var(--wfui-surface-alt-hover);
+    background-color: var(--wfui-surface);
     border-color: rgba(from var(--wfui-accent) R G B / 0.5);
 
     .itemLabel {
