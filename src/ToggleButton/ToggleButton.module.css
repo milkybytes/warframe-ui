@@ -3,7 +3,7 @@
     align-items: stretch;
     padding: 0;
     background: transparent;
-    border: 1px solid rgba(from var(--wfui-primary) R G B / 0.3);
+    border: 1px solid rgba(from var(--wfui-accent) R G B / 0.3);
     cursor: pointer;
     transition: all 0.2s;
     min-width: 80px;
@@ -12,7 +12,7 @@
 }
 
 .toggleButton:hover:not(:disabled) {
-    border-color: var(--wfui-primary);
+    border-color: var(--wfui-accent);
 }
 
 .toggleButton:disabled {
@@ -25,21 +25,21 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: rgba(from var(--wfui-text-secondary) R G B / 0.3);
+    background: rgba(from var(--wfui-text-interactive) R G B / 0.3);
     transition: background 0.2s;
 }
 
 .toggleButton:hover:not(:disabled) .iconContainer .icon {
-    color: var(--wfui-primary);
+    color: var(--wfui-accent);
 }
 
 .icon {
-    fill: var(--wfui-text-secondary);
+    fill: var(--wfui-text-interactive);
     transition: fill 0.2s;
 }
 
 .toggleButton:hover:not(:disabled) .icon {
-    fill: var(--wfui-primary);
+    fill: var(--wfui-accent);
 }
 
 .barsContainer {
@@ -47,13 +47,13 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: rgba(from var(--wfui-secondary) R G B / 0.5);
+    background: rgba(from var(--wfui-surface-alt) R G B / 0.5);
     transition: background 0.2s;
 }
 
 .menuIcon {
     transform: rotate(90deg);
-    fill: rgba(from var(--wfui-text-secondary) R G B / 0.5);
+    fill: rgba(from var(--wfui-text-interactive) R G B / 0.5);
     transition: fill 0.2s;
 }
 
@@ -63,17 +63,17 @@
     align-items: center;
     justify-content: center;
     transition: all 0.2s;
-    background: rgba(from var(--wfui-secondary) R G B / 0.5);
+    background: rgba(from var(--wfui-surface-alt) R G B / 0.5);
     font-weight: 500;
     font-size: 14px;
-    color: var(--wfui-text-secondary);
+    color: var(--wfui-text-interactive);
 }
 
 .labelledToggle.active {
-    background: rgba(from var(--wfui-text-secondary) R G B / 0.3);
-    color: rgba(from var(--wfui-text-secondary) R G B / 0.5);
+    background: rgba(from var(--wfui-text-interactive) R G B / 0.3);
+    color: rgba(from var(--wfui-text-interactive) R G B / 0.5);
 }
 
 .toggleButton:hover > .active {
-    color: var(--wfui-primary);
+    color: var(--wfui-accent);
 }

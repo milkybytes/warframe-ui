@@ -1,5 +1,5 @@
 .bracketIcon {
-  fill: var(--wfui-text-secondary);
+  fill: var(--wfui-text-interactive);
   height: 27px;
 }
 
@@ -34,7 +34,7 @@
   appearance: none;
   cursor: pointer;
   background: transparent;
-  outline: 2px solid rgba(from var(--wfui-primary) R G B / 0.45);
+  outline: 2px solid rgba(from var(--wfui-accent) R G B / 0.45);
   position: relative;
   z-index: 10;
   margin: 0;
@@ -45,8 +45,8 @@
 .sliderInput::-webkit-slider-track {
   width: 100%;
   height: 4px;
-  background: var(--wfui-secondary);
-  border: 1px solid var(--wfui-text-secondary);
+  background: var(--wfui-surface-alt);
+  border: 1px solid var(--wfui-text-interactive);
   border-radius: 2px;
   box-sizing: border-box;
 }
@@ -54,8 +54,8 @@
 .sliderInput::-moz-range-track {
   width: 100%;
   height: 4px;
-  background: var(--wfui-secondary);
-  border: 1px solid var(--wfui-text-secondary);
+  background: var(--wfui-surface-alt);
+  border: 1px solid var(--wfui-text-interactive);
   border-radius: 2px;
   box-sizing: border-box;
 }
@@ -69,8 +69,8 @@
   appearance: none;
   width: 2px;
   height: 15px;
-  background: rgba(from var(--wfui-text-secondary) R G B / 0.5);
-  outline: 2px solid var(--wfui-text-secondary);
+  background: rgba(from var(--wfui-text-interactive) R G B / 0.5);
+  outline: 2px solid var(--wfui-text-interactive);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   transition: all 0.2s ease;
 }
@@ -80,7 +80,7 @@
 }
 
 .sliderInput::-webkit-slider-thumb:hover {
-  background: var(--wfui-primary);
+  background: var(--wfui-accent);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
@@ -88,7 +88,7 @@
   width: 12px;
   height: 18px;
   border-radius: 2px;
-  background: var(--wfui-primary);
+  background: var(--wfui-accent);
   border: 1px solid var(--wfui-bg);
   cursor: grab;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
@@ -100,7 +100,7 @@
 }
 
 .sliderInput::-moz-range-thumb:hover {
-  background: var(--wfui-primary);
+  background: var(--wfui-accent);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 

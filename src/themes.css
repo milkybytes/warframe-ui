@@ -7,16 +7,16 @@
  * Available themes: default, harrier, light, vitruvian, nidus, darklotus, lunar
  *
  * CSS variables:
- *   --wfui-bg               Page background
- *   --wfui-text             Text on background
- *   --wfui-surface          Elevated surface color, used in buttons and inputs
- *   --wfui-primary          Primary accent / brand color
- *   --wfui-secondary        Secondary background (cards, inputs)
- *   --wfui-secondary-hover  Secondary hover state
- *   --wfui-text-secondary   Text on secondary surfaces
- *   --wfui-disabled-bg      Disabled background
- *   --wfui-disabled-text    Disabled text
- *   --wfui-shadow           Default box-shadow
+ *   --wfui-bg                 Page background
+ *   --wfui-text               Page-content text, subheaders, descriptions, etc.
+ *   --wfui-surface            Control surface (buttons, inputs, selects)
+ *   --wfui-accent             Interactive highlight (hover text, active borders, glows)
+ *   --wfui-surface-alt        Alternate surface (cards, panels, tracks)
+ *   --wfui-surface-alt-hover  Alternate surface hover state
+ *   --wfui-text-interactive   Resting text/icon color for interactive elements
+ *   --wfui-disabled-bg        Disabled background
+ *   --wfui-disabled-text      Disabled text
+ *   --wfui-shadow             Default box-shadow
  */
 
 /* ─── Default (Legacy) ──────────────────────────────────────────── */
@@ -24,10 +24,10 @@
   --wfui-bg: #1e3642;
   --wfui-text: #ffffff;
   --wfui-surface: #2c4351;
-  --wfui-primary: #e8d55d;
-  --wfui-secondary: #253f4c;
-  --wfui-secondary-hover: #2c4351;
-  --wfui-text-secondary: #ffffff;
+  --wfui-accent: #e8d55d;
+  --wfui-surface-alt: #253f4c;
+  --wfui-surface-alt-hover: #2c4351;
+  --wfui-text-interactive: #ffffff;
 
   --wfui-disabled-bg: #bdbdbd;
   --wfui-disabled-text: #616161;
@@ -40,10 +40,10 @@
   --wfui-bg: #282520;
   --wfui-text: #EEC169;
   --wfui-surface: #2E2D28;
-  --wfui-primary: #ECD3A2;
-  --wfui-secondary: #383530;
-  --wfui-secondary-hover: #2E2D28;
-  --wfui-text-secondary: #EEC169;
+  --wfui-accent: #ECD3A2;
+  --wfui-surface-alt: #383530;
+  --wfui-surface-alt-hover: #2E2D28;
+  --wfui-text-interactive: #EEC169;
 }
 
 /* ─── Conquera ──────────────────────────────────────────────────── */
@@ -51,10 +51,10 @@
   --wfui-bg: #B634BA;
   --wfui-text: #FFFFFF;
   --wfui-surface: #BC3FBF;
-  --wfui-primary: #FFF1BF;
-  --wfui-secondary: #C43DC7;
-  --wfui-secondary-hover: #BC3FBF;
-  --wfui-text-secondary: #FFFFFF;
+  --wfui-accent: #FFF1BF;
+  --wfui-surface-alt: #C43DC7;
+  --wfui-surface-alt-hover: #BC3FBF;
+  --wfui-text-interactive: #FFFFFF;
 }
 
 /* ─── Corpus ──────────────────────────────────────────────────── */
@@ -62,10 +62,10 @@
   --wfui-bg: #070C12;
   --wfui-text: #35BFE4;
   --wfui-surface: #0A1727;
-  --wfui-primary: #6AE7F9;
-  --wfui-secondary: #040505;
-  --wfui-secondary-hover: #0A1727;
-  --wfui-text-secondary: #35BFE4;
+  --wfui-accent: #6AE7F9;
+  --wfui-surface-alt: #040505;
+  --wfui-surface-alt-hover: #0A1727;
+  --wfui-text-interactive: #35BFE4;
 }
 
 /* ─── Dark Lotus ───────────────────────────────────────────────── */
@@ -73,10 +73,10 @@
   --wfui-bg: #190042;
   --wfui-text: #fff1bf;
   --wfui-surface: #2a0a5e;
-  --wfui-primary: #c8a9ed;
-  --wfui-secondary: #250953;
-  --wfui-secondary-hover: #2a0a5e;
-  --wfui-text-secondary: #8c7793;
+  --wfui-accent: #c8a9ed;
+  --wfui-surface-alt: #250953;
+  --wfui-surface-alt-hover: #2a0a5e;
+  --wfui-text-interactive: #8c7793;
 }
 
 /* ─── Deadlock ──────────────────────────────────────────────────── */
@@ -98,10 +98,10 @@
   --wfui-bg: #4e080a;
   --wfui-text: #ec9699;
   --wfui-surface: #5f1317;
-  --wfui-primary: #d3b84f;
-  --wfui-secondary: #5c1417;
-  --wfui-secondary-hover: #5f1317;
-  --wfui-text-secondary: #ffffff;
+  --wfui-accent: #d3b84f;
+  --wfui-surface-alt: #5c1417;
+  --wfui-surface-alt-hover: #5f1317;
+  --wfui-text-interactive: #ffffff;
 }
 
 /* ─── Pom-2 ──────────────────────────────────────────────────── */
@@ -115,10 +115,10 @@
   --wfui-bg: #090810;
   --wfui-text: #ffffff;
   --wfui-surface: #18171f;
-  --wfui-primary: #f6e4c0;
-  --wfui-secondary: #121117;
-  --wfui-secondary-hover: #18171f;
-  --wfui-text-secondary: #beaa63;
+  --wfui-accent: #f6e4c0;
+  --wfui-surface-alt: #121117;
+  --wfui-surface-alt-hover: #18171f;
+  --wfui-text-interactive: #beaa63;
 }
 
 /* ─── Zephyr Harrier ──────────────────────────────────────────────────── */
@@ -126,20 +126,20 @@
   --wfui-bg: #0a101c;
   --wfui-text: #ffffff;
   --wfui-surface: #151f2f;
-  --wfui-primary: #fe3500;
-  --wfui-secondary: #111926;
-  --wfui-secondary-hover: #151f2f;
-  --wfui-text-secondary: #ff8402;
+  --wfui-accent: #fe3500;
+  --wfui-surface-alt: #111926;
+  --wfui-surface-alt-hover: #151f2f;
+  --wfui-text-interactive: #ff8402;
 }
 
 [data-theme='lotus'] {
   --wfui-bg: #1e3642;
   --wfui-text: #ffffff;
   --wfui-surface: #2c4351;
-  --wfui-primary: #FFF1BF;
-  --wfui-secondary: #253f4c;
-  --wfui-secondary-hover: #2c4351;
-  --wfui-text-secondary: #ffffff;
+  --wfui-accent: #FFF1BF;
+  --wfui-surface-alt: #253f4c;
+  --wfui-surface-alt-hover: #2c4351;
+  --wfui-text-interactive: #ffffff;
 }
 
 /* ─── Nidus ────────────────────────────────────────────────────── */
@@ -147,10 +147,10 @@
   --wfui-bg: #edebdc;
   --wfui-text: #8f265e;
   --wfui-surface: #fefed1;
-  --wfui-primary: #f64a60;
-  --wfui-secondary: #fefeda;
-  --wfui-secondary-hover: #fefed1;
-  --wfui-text-secondary: #8f265e;
+  --wfui-accent: #f64a60;
+  --wfui-surface-alt: #fefeda;
+  --wfui-surface-alt-hover: #fefed1;
+  --wfui-text-interactive: #8f265e;
 }
 
 /* ─── Tenno ────────────────────────────────────────────────────── */
@@ -169,21 +169,21 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--wfui-secondary-hover);
+  background: var(--wfui-surface-alt-hover);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--wfui-text-secondary);
+  background: var(--wfui-text-interactive);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--wfui-primary);
+  background: var(--wfui-accent);
 }
 
 ::-webkit-scrollbar-thumb:active {
-  outline: 1px solid rgba(from var(--wfui-primary) R G B / 1);
+  outline: 1px solid rgba(from var(--wfui-accent) R G B / 1);
 }
 
 ::-webkit-scrollbar-track:active {
-  background: rgba(from var(--wfui-text) R G B / 0.5);
+  background: rgba(from var(--wfui-text-interactive) R G B / 0.7);
 }

@@ -7,10 +7,10 @@ export interface WfuiThemeVars {
   '--wfui-bg': string;
   '--wfui-text': string;
   '--wfui-surface': string;
-  '--wfui-primary': string;
-  '--wfui-secondary': string;
-  '--wfui-secondary-hover': string;
-  '--wfui-text-secondary': string;
+  '--wfui-accent': string;
+  '--wfui-surface-alt': string;
+  '--wfui-surface-alt-hover': string;
+  '--wfui-text-interactive': string;
   '--wfui-disabled-bg'?: string;
   '--wfui-disabled-text'?: string;
   '--wfui-shadow'?: string;
@@ -20,10 +20,10 @@ export const THEME_VAR_KEYS = [
   '--wfui-bg',
   '--wfui-text',
   '--wfui-surface',
-  '--wfui-primary',
-  '--wfui-secondary',
-  '--wfui-secondary-hover',
-  '--wfui-text-secondary',
+  '--wfui-accent',
+  '--wfui-surface-alt',
+  '--wfui-surface-alt-hover',
+  '--wfui-text-interactive',
   '--wfui-disabled-bg',
   '--wfui-disabled-text',
   '--wfui-shadow',

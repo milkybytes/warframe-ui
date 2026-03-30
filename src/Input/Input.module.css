@@ -11,7 +11,7 @@
   border-radius: 0;
   box-sizing: border-box;
   background: var(--wfui-surface);
-  color: rgba(from var(--wfui-text-secondary) R G B / 0.8);
+  color: rgba(from var(--wfui-text-interactive) R G B / 0.8);
   font-size: 0.875rem;
   transition: color 0.2s;
   font-family: inherit;
@@ -24,13 +24,13 @@
   }
 
   &::placeholder {
-    color: rgba(from var(--wfui-text-secondary) R G B / 0.6);
+    color: rgba(from var(--wfui-text-interactive) R G B / 0.6);
   }
 }
 
 .input:focus {
   outline: none;
-  color: var(--wfui-primary);
+  color: var(--wfui-accent);
 }
 
 .input.hasIcon {
@@ -61,7 +61,7 @@
   transform: translateY(-50%);
   background: none;
   border: none;
-  color: var(--wfui-text-secondary);
+  color: var(--wfui-text-interactive);
   font-size: 1.25rem;
   cursor: pointer;
   padding: 0.25rem;
