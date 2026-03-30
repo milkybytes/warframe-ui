@@ -105,10 +105,26 @@
 }
 
 /* ─── Pom-2 ──────────────────────────────────────────────────── */
-[data-theme='pom2'] {}
+[data-theme='pom2'] {
+  --wfui-bg: #00170F;
+  --wfui-text: #FFFFFF;
+  --wfui-surface: #011F17;
+  --wfui-accent: #05C732;
+  --wfui-surface-alt: #07271C;
+  --wfui-surface-alt-hover: #05261B;
+  --wfui-text-interactive: #86E5A1;
+}
 
 /* ─── Stalker ──────────────────────────────────────────────────── */
-[data-theme='stalker'] {}
+[data-theme='stalker'] {
+  --wfui-bg: #000000;
+  --wfui-text: #9A201F;
+  --wfui-surface: #080405;
+  --wfui-accent: #FA3F38;
+  --wfui-surface-alt: #0C0402;
+  --wfui-surface-alt-hover: #0E0604;
+  --wfui-text-interactive: #9A201F;
+}
 
 /* ─── Vitruvian ────────────────────────────────────────────────── */
 [data-theme='vitruvian'] {
