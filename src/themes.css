@@ -80,17 +80,49 @@
 }
 
 /* ─── Deadlock ──────────────────────────────────────────────────── */
-[data-theme='deadlock'] {}
+[data-theme='deadlock'] {
+  --wfui-bg: #0C162F;
+  --wfui-text: #D9CFB4;
+  --wfui-surface: #1A213B;
+  --wfui-accent: #E9D06B;
+  --wfui-surface-alt: #212940;
+  --wfui-surface-alt-hover: #1F273E;
+  --wfui-text-interactive: #FFFFFF;
+}
 
 /* ─── Equinox ──────────────────────────────────────────────────── */
-[data-theme='equinox'] {}
+[data-theme='equinox'] {
+  --wfui-bg: #000008;
+  --wfui-text: #FFFFFF;
+  --wfui-surface: #0E040C;
+  --wfui-accent: #FFFFFF;
+  --wfui-surface-alt: #0E070E;
+  --wfui-surface-alt-hover: #0E040D;
+  --wfui-text-interactive: #9F9EA4;
+}
 
 
 /* ─── Fortuna ──────────────────────────────────────────────────── */
-[data-theme='fortuna'] {}
+[data-theme='fortuna'] {
+  --wfui-bg: #000000;
+  --wfui-text: #74A9D1;
+  --wfui-surface: #030615;
+  --wfui-accent: #FE72DD;
+  --wfui-surface-alt: #04091D;
+  --wfui-surface-alt-hover: #05081B;
+  --wfui-text-interactive: #4469C2;
+}
 
 /* ─── Grineer ──────────────────────────────────────────────────── */
-[data-theme='grineer'] {}
+[data-theme='grineer'] {
+  --wfui-bg: #000F0C;
+  --wfui-text: #F8BD63;
+  --wfui-surface: #071812;
+  --wfui-accent: #F7DF9F;
+  --wfui-surface-alt: #111B12;
+  --wfui-surface-alt-hover: #091A14;
+  --wfui-text-interactive: #FFBB6A;
+}
 
 
 /* ─── Lunar Renewal ────────────────────────────────────────────────────── */
