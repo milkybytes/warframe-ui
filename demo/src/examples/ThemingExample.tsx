@@ -167,7 +167,7 @@ function MyComponent() {
 import type { WfuiThemeVars } from '@milkybytes/warframe-ui';
 
 // Register once (e.g. at app startup)
-// surface-alt and surface-alt-hover are auto-derived from surface + bg
+// surface-alt is auto-derived from surface + bg
 registerTheme('custom example', {
   '--wfui-bg': '#0a1628',
   '--wfui-text': '#b0d4f1',
