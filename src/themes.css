@@ -7,76 +7,51 @@
  * Available themes: default, harrier, light, vitruvian, nidus, darklotus, lunar
  *
  * CSS variables:
- *   --wfui-bg               Page background
- *   --wfui-text             Text on background
- *   --wfui-surface          Elevated surface color, used in buttons and inputs
- *   --wfui-primary          Primary accent / brand color
- *   --wfui-secondary        Secondary background (cards, inputs)
- *   --wfui-secondary-hover  Secondary hover state
- *   --wfui-text-secondary   Text on secondary surfaces
- *   --wfui-disabled-bg      Disabled background
- *   --wfui-disabled-text    Disabled text
- *   --wfui-shadow           Default box-shadow
+ *   --wfui-bg                 Page background
+ *   --wfui-text               Page-content text, subheaders, descriptions, etc.
+ *   --wfui-surface            Control surface (buttons, inputs, selects)
+ *   --wfui-accent             Interactive highlight (hover text, active borders, glows)
+ *   --wfui-text-interactive   Resting text/icon color for interactive elements
+ *   --wfui-shadow             Default box-shadow
  */
 
-/* ─── Default (Lotus) ──────────────────────────────────────────── */
+/* ─── Default (Legacy) ──────────────────────────────────────────── */
 :root {
   --wfui-bg: #1e3642;
   --wfui-text: #ffffff;
   --wfui-surface: #2c4351;
-  --wfui-primary: #e8d55d;
-  --wfui-secondary: #253f4c;
-  --wfui-secondary-hover: #2c4351;
-  --wfui-text-secondary: #ffffff;
-
-  --wfui-disabled-bg: #bdbdbd;
-  --wfui-disabled-text: #616161;
+  --wfui-accent: #e8d55d;
+  --wfui-surface-alt: color-mix(in oklch, var(--wfui-surface) 75%, var(--wfui-bg));
+  --wfui-text-interactive: #ffffff;
 
   --wfui-shadow: rgba(0, 0, 0, 0.5) 2px 2px 4px;
 }
 
-/* ─── Harrier ──────────────────────────────────────────────────── */
-[data-theme='harrier'] {
-  --wfui-bg: #0a101c;
-  --wfui-text: #ffffff;
-  --wfui-surface: #151f2f;
-  --wfui-primary: #fe3500;
-  --wfui-secondary: #111926;
-  --wfui-secondary-hover: #151f2f;
-  --wfui-text-secondary: #ff8402;
+/* ─── Baruuk ──────────────────────────────────────────────────── */
+[data-theme='baruuk'] {
+  --wfui-bg: #282520;
+  --wfui-text: #EEC169;
+  --wfui-surface: #2E2D28;
+  --wfui-accent: #ECD3A2;
+  --wfui-text-interactive: #EEC169;
 }
 
-/* ─── Light ────────────────────────────────────────────────────── */
-[data-theme='light'] {
-  --wfui-bg: #dcdcdc;
-  --wfui-text: #14291d;
-  --wfui-surface: white;
-  --wfui-primary: #b27d05;
-  --wfui-secondary: #fcfcfc;
-  --wfui-secondary-hover: white;
-  --wfui-text-secondary: #5f5f5f;
+/* ─── Conquera ──────────────────────────────────────────────────── */
+[data-theme='conquera'] {
+  --wfui-bg: #B634BA;
+  --wfui-text: #FFFFFF;
+  --wfui-surface: #BC3FBF;
+  --wfui-accent: #FFF1BF;
+  --wfui-text-interactive: #FFFFFF;
 }
 
-/* ─── Vitruvian ────────────────────────────────────────────────── */
-[data-theme='vitruvian'] {
-  --wfui-bg: #090810;
-  --wfui-text: #ffffff;
-  --wfui-surface: #18171f;
-  --wfui-primary: #f6e4c0;
-  --wfui-secondary: #121117;
-  --wfui-secondary-hover: #18171f;
-  --wfui-text-secondary: #beaa63;
-}
-
-/* ─── Nidus ────────────────────────────────────────────────────── */
-[data-theme='nidus'] {
-  --wfui-bg: #edebdc;
-  --wfui-text: #8f265e;
-  --wfui-surface: #fefed1;
-  --wfui-primary: #f64a60;
-  --wfui-secondary: #fefeda;
-  --wfui-secondary-hover: #fefed1;
-  --wfui-text-secondary: #8f265e;
+/* ─── Corpus ──────────────────────────────────────────────────── */
+[data-theme='corpus'] {
+  --wfui-bg: #070C12;
+  --wfui-text: #35BFE4;
+  --wfui-surface: #0A1727;
+  --wfui-accent: #6AE7F9;
+  --wfui-text-interactive: #35BFE4;
 }
 
 /* ─── Dark Lotus ───────────────────────────────────────────────── */
@@ -84,21 +59,135 @@
   --wfui-bg: #190042;
   --wfui-text: #fff1bf;
   --wfui-surface: #2a0a5e;
-  --wfui-primary: #c8a9ed;
-  --wfui-secondary: #250953;
-  --wfui-secondary-hover: #2a0a5e;
-  --wfui-text-secondary: #8c7793;
+  --wfui-accent: #c8a9ed;
+  --wfui-text-interactive: #8c7793;
 }
 
-/* ─── Lunar ────────────────────────────────────────────────────── */
+/* ─── Deadlock ──────────────────────────────────────────────────── */
+[data-theme='deadlock'] {
+  --wfui-bg: #0C162F;
+  --wfui-text: #D9CFB4;
+  --wfui-surface: #1A213B;
+  --wfui-accent: #E9D06B;
+  --wfui-text-interactive: #FFFFFF;
+}
+
+/* ─── Equinox ──────────────────────────────────────────────────── */
+[data-theme='equinox'] {
+  --wfui-bg: #000008;
+  --wfui-text: #FFFFFF;
+  --wfui-surface: #0E040C;
+  --wfui-accent: #FFFFFF;
+  --wfui-text-interactive: #9F9EA4;
+}
+
+
+/* ─── Fortuna ──────────────────────────────────────────────────── */
+[data-theme='fortuna'] {
+  --wfui-bg: #000000;
+  --wfui-text: #74A9D1;
+  --wfui-surface: #030615;
+  --wfui-accent: #FE72DD;
+  --wfui-text-interactive: #4469C2;
+}
+
+/* ─── Grineer ──────────────────────────────────────────────────── */
+[data-theme='grineer'] {
+  --wfui-bg: #000F0C;
+  --wfui-text: #F8BD63;
+  --wfui-surface: #071812;
+  --wfui-accent: #F7DF9F;
+  --wfui-text-interactive: #FFBB6A;
+}
+
+
+/* ─── Lunar Renewal ────────────────────────────────────────────────────── */
 [data-theme='lunar'] {
   --wfui-bg: #4e080a;
   --wfui-text: #ec9699;
   --wfui-surface: #5f1317;
-  --wfui-primary: #d3b84f;
-  --wfui-secondary: #5c1417;
-  --wfui-secondary-hover: #5f1317;
-  --wfui-text-secondary: #ffffff;
+  --wfui-accent: #d3b84f;
+  --wfui-text-interactive: #ffffff;
+}
+
+/* ─── Pom-2 ──────────────────────────────────────────────────── */
+[data-theme='pom2'] {
+  --wfui-bg: #00170F;
+  --wfui-text: #FFFFFF;
+  --wfui-surface: #011F17;
+  --wfui-accent: #05C732;
+  --wfui-text-interactive: #86E5A1;
+}
+
+/* ─── Stalker ──────────────────────────────────────────────────── */
+[data-theme='stalker'] {
+  --wfui-bg: #000000;
+  --wfui-text: #9A201F;
+  --wfui-surface: #080405;
+  --wfui-accent: #FA3F38;
+  --wfui-text-interactive: #9A201F;
+}
+
+/* ─── Vitruvian ────────────────────────────────────────────────── */
+[data-theme='vitruvian'] {
+  --wfui-bg: #090810;
+  --wfui-text: #ffffff;
+  --wfui-surface: #18171f;
+  --wfui-accent: #f6e4c0;
+  --wfui-text-interactive: #beaa63;
+}
+
+/* ─── Zephyr Harrier ──────────────────────────────────────────────────── */
+[data-theme='harrier'] {
+  --wfui-bg: #0a101c;
+  --wfui-text: #ffffff;
+  --wfui-surface: #151f2f;
+  --wfui-accent: #fe3500;
+  --wfui-text-interactive: #ff8402;
+}
+
+[data-theme='lotus'] {
+  --wfui-bg: #1e3642;
+  --wfui-text: #ffffff;
+  --wfui-surface: #2c4351;
+  --wfui-accent: #FFF1BF;
+  --wfui-text-interactive: #ffffff;
+}
+
+/* ─── Nidus ────────────────────────────────────────────────────── */
+[data-theme='nidus'] {
+  --wfui-bg: #E1E0CC;
+  --wfui-text: #8B2564;
+  --wfui-surface: #F8F7DB;
+  --wfui-accent: #F84A63;
+  --wfui-text-interactive: #8B2564;
+}
+
+/* ─── Tenno ────────────────────────────────────────────────────── */
+[data-theme='tenno'] {
+  --wfui-bg: #C7D9DB;
+  --wfui-text: #0D4E6C;
+  --wfui-surface: #CFE7E9;
+  --wfui-accent: #076A4D;
+  --wfui-text-interactive: #0D4E6C;
+}
+
+/* ─── Orokin ────────────────────────────────────────────────────── */
+[data-theme='orokin'] {
+  --wfui-bg: #DEE2E3;
+  --wfui-text: #484212;
+  --wfui-surface: #EEF7F6;
+  --wfui-accent: #AE7B08;
+  --wfui-text-interactive: #13271E;
+}
+
+/* ─── High Contrast ────────────────────────────────────────────────────── */
+[data-theme='highcontrast'] {
+  --wfui-bg: #0C1733;
+  --wfui-text: #EE9C76;
+  --wfui-surface: #12203D;
+  --wfui-accent: #FFFF1B;
+  --wfui-text-interactive: #67B0FD;
 }
 
 /* ─── Scrollbar ────────────────────────────────────────────────── */
@@ -108,21 +197,21 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--wfui-secondary-hover);
+  background: var(--wfui-surface);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--wfui-text-secondary);
+  background: var(--wfui-text-interactive);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--wfui-primary);
+  background: var(--wfui-accent);
 }
 
 ::-webkit-scrollbar-thumb:active {
-  outline: 1px solid rgba(from var(--wfui-primary) R G B / 1);
+  outline: 1px solid rgba(from var(--wfui-accent) R G B / 1);
 }
 
 ::-webkit-scrollbar-track:active {
-  background: rgba(from var(--wfui-text) R G B / 0.5);
+  background: rgba(from var(--wfui-text-interactive) R G B / 0.7);
 }

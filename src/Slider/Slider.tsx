@@ -38,7 +38,7 @@ const Slider = ({ value, onChange, min = 0, max = 1, step = 0.01, disabled = fal
           disabled={disabled}
           className={styles.sliderInput}
           style={{
-            background: `linear-gradient(to right, var(--wfui-text-secondary) 0%, var(--wfui-text-secondary) ${((value - min) / (max - min)) * 100}%, var(--wfui-secondary) ${((value - min) / (max - min)) * 100}%, var(--wfui-secondary) 100%)`,
+            background: `linear-gradient(to right, var(--wfui-text-interactive) 0%, var(--wfui-text-interactive) ${((value - min) / (max - min)) * 100}%, var(--wfui-surface-alt) ${((value - min) / (max - min)) * 100}%, var(--wfui-surface-alt) 100%)`,
           }}
         />
       </div>

@@ -24,7 +24,7 @@
   font-size: 0.7rem;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  color: var(--wfui-text-secondary);
+  color: var(--wfui-text-interactive);
   font-weight: 900;
   margin-bottom: 0.5rem;
 }
@@ -39,7 +39,7 @@
 }
 
 .navLink:hover {
-  background: rgba(from var(--wfui-text-secondary) R G B / 0.07);
+  background: rgba(from var(--wfui-text-interactive) R G B / 0.07);
 }
 
 /* ── Main content ──────────────────────────────────────────────── */
@@ -87,7 +87,7 @@
   font-size: 1.4rem;
   font-weight: 700;
   margin-bottom: 0.5rem;
-  color: var(--wfui-text-secondary);
+  color: var(--wfui-text-interactive);
 }
 
 .sectionDesc {
@@ -101,7 +101,7 @@
   font-size: 1rem;
   font-weight: 600;
   margin-bottom: 0.75rem;
-  color: rgba(from var(--wfui-text-secondary) R G B / 0.7);
+  color: rgba(from var(--wfui-text-interactive) R G B / 0.7);
 }
 
 /* ── Example block: preview + code ─────────────────────────────── */

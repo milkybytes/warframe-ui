@@ -7,12 +7,8 @@ export interface WfuiThemeVars {
   '--wfui-bg': string;
   '--wfui-text': string;
   '--wfui-surface': string;
-  '--wfui-primary': string;
-  '--wfui-secondary': string;
-  '--wfui-secondary-hover': string;
-  '--wfui-text-secondary': string;
-  '--wfui-disabled-bg'?: string;
-  '--wfui-disabled-text'?: string;
+  '--wfui-accent': string;
+  '--wfui-text-interactive': string;
   '--wfui-shadow'?: string;
 }
 
@@ -20,29 +16,36 @@ export const THEME_VAR_KEYS = [
   '--wfui-bg',
   '--wfui-text',
   '--wfui-surface',
-  '--wfui-primary',
-  '--wfui-secondary',
-  '--wfui-secondary-hover',
-  '--wfui-text-secondary',
-  '--wfui-disabled-bg',
-  '--wfui-disabled-text',
+  '--wfui-accent',
+  '--wfui-text-interactive',
   '--wfui-shadow',
 ] as const;
 
 export const BUILTIN_THEMES = [
   'default',
-  'harrier',
-  'light',
-  'vitruvian',
-  'nidus',
+  'baruuk',
+  'conquera',
+  'corpus',
   'darklotus',
+  'deadlock',
+  'equinox',
+  'fortuna',
+  'grineer',
   'lunar',
+  'pom2',
+  'stalker',
+  'vitruvian',
+  'lotus',
+  'harrier',
+  'nidus',
+  'tenno',
+  'orokin',
+  'highcontrast'
 ] as const;
 
 export type BuiltinTheme = (typeof BUILTIN_THEMES)[number];
 
 /* ── Runtime custom theme registration ─────────────────────────── */
-
 let styleEl: HTMLStyleElement | null = null;
 const customThemes = new Map<string, WfuiThemeVars>();
 
@@ -144,6 +147,10 @@ export function WfuiProvider({ theme: controlledTheme, onThemeChange, children }
   useEffect(() => {
     if (controlledTheme !== undefined) setInternalTheme(controlledTheme);
   }, [controlledTheme]);
+
+  useEffect(() => {
+    document.documentElement.setAttribute('data-theme', theme === 'default' ? '' : theme);
+  }, [theme]);
 
   const value = useMemo(() => ({ theme, setTheme, containerRef }), [theme, setTheme]);
 

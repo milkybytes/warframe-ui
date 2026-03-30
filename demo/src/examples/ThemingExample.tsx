@@ -20,45 +20,55 @@ function ThemeConsumer() {
     return (
         <div className={styles.column} style={{ maxWidth: '100%', gap: '0.75rem' }}>
             <p className={styles.caption}>
-                Active theme: <strong style={{ color: vars['--wfui-primary'] }}>{theme}</strong>
+                Active theme: <strong style={{ color: vars['--wfui-accent'] }}>{theme}</strong>
             </p>
             <div className={styles.row}>
-                {[...BUILTIN_THEMES, 'corpus'].map((t) => (
+                {[...BUILTIN_THEMES, 'custom example'].map((t) => (
                     <Button key={t} onClick={() => setTheme(t)}>
                         {t}
                     </Button>
                 ))}
             </div>
             <Input placeholder="Themed input" value={inputValue} onChange={(e) => setInputValue(e.target.value)} />
-            <div className={styles.row} style={{ gap: '0.5rem', display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
-                {['--wfui-bg', '--wfui-primary', '--wfui-surface', '--wfui-text-secondary'].map((k) => (
-                    <div key={k} style={{ textAlign: 'center', display: 'flex', flexDirection: 'row', alignItems: 'center', gap: '0.25rem' }}>
-                        <div
-                            style={{
-                                width: 24,
-                                height: 24,
-                                borderRadius: 4,
-                                backgroundColor: vars[k] || 'transparent',
-                                border: '1px solid rgba(255,255,255,0.15)',
-                            }}
-                        />
-                        <span className={styles.caption}>{k}</span>
-                    </div>
-                ))}
-            </div>
+            <table style={{ borderCollapse: 'collapse', width: 'fit-content', background: vars['--wfui-surface'], borderRadius: 6, overflow: 'hidden', boxShadow: '0 1px 4px rgba(0,0,0,0.3)' }}>
+                <thead>
+                    <tr style={{ background: vars['--wfui-surface-alt'], borderBottom: '1px solid rgba(255,255,255,0.08)', boxShadow: '0 2px 4px rgba(0,0,0,0.2)' }}>
+                        <th className={styles.caption} style={{ textAlign: 'left', padding: '0.3rem 0.5rem', fontWeight: 600 }}>Swatch</th>
+                        <th className={styles.caption} style={{ textAlign: 'left', padding: '0.3rem 0.5rem', fontWeight: 600 }}>Variable</th>
+                        <th className={styles.caption} style={{ textAlign: 'left', padding: '0.3rem 0.5rem', fontWeight: 600 }}>Value</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {['--wfui-bg', '--wfui-text', '--wfui-accent', '--wfui-surface', '--wfui-text-interactive'].map((k, i) => (
+                        <tr key={k} style={{ background: i % 2 === 0 ? 'rgba(255,255,255,0.03)' : 'transparent', borderBottom: '1px solid rgba(255,255,255,0.04)' }}>
+                            <td style={{ padding: '0.2rem 0.5rem' }}>
+                                <div
+                                    style={{
+                                        width: 18,
+                                        height: 18,
+                                        borderRadius: 3,
+                                        backgroundColor: vars[k] || 'transparent',
+                                        border: '1px solid rgba(255,255,255,0.15)',
+                                    }}
+                                />
+                            </td>
+                            <td className={styles.caption} style={{ padding: '0.2rem 0.5rem' }}>{k}</td>
+                            <td className={styles.caption} style={{ padding: '0.2rem 0.5rem', fontFamily: 'monospace' }}>{vars[k]}</td>
+                        </tr>
+                    ))}
+                </tbody>
+            </table>
         </div>
     );
 }
 
-/* ── Register a custom "corpus" theme so the demo can switch to it ─ */
-registerTheme('corpus', {
+/* ── Register a custom "custom example" theme so the demo can switch to it ─ */
+registerTheme('custom example', {
     '--wfui-bg': '#0a1628',
     '--wfui-text': '#b0d4f1',
     '--wfui-surface': '#0f2035',
-    '--wfui-primary': '#36a3d9',
-    '--wfui-secondary': '#0c1a2e',
-    '--wfui-secondary-hover': '#0f2035',
-    '--wfui-text-secondary': '#7ec8e3',
+    '--wfui-accent': '#36a3d9',
+    '--wfui-text-interactive': '#7ec8e3',
 });
 
 export default function ThemingExample({ theme, onThemeChange }: { theme: string; onThemeChange: (t: string) => void }) {
@@ -139,8 +149,8 @@ function MyComponent() {
   const vars = useWfuiThemeVars();
 
   return (
-    <div style={{ color: vars['--wfui-primary'] }}>
-      Primary color: {vars['--wfui-primary']}
+    <div style={{ color: vars['--wfui-accent'] }}>
+      Primary color: {vars['--wfui-accent']}
     </div>
   );
 }`}</Code>
@@ -150,26 +160,25 @@ function MyComponent() {
             <div className={styles.example} style={{ flexDirection: 'column' }}>
                 <div className={styles.preview}>
                     <p className={styles.sectionDesc} style={{ marginBottom: 0 }}>
-                        Click <strong>corpus</strong> above to see the custom theme in action.
+                        Click <strong>Custom</strong> button above to see the custom theme in action.
                     </p>
                 </div>
                 <Code>{`import { registerTheme } from '@milkybytes/warframe-ui';
 import type { WfuiThemeVars } from '@milkybytes/warframe-ui';
 
 // Register once (e.g. at app startup)
-registerTheme('corpus', {
+// surface-alt is auto-derived from surface + bg
+registerTheme('custom example', {
   '--wfui-bg': '#0a1628',
   '--wfui-text': '#b0d4f1',
   '--wfui-surface': '#0f2035',
-  '--wfui-primary': '#36a3d9',
-  '--wfui-secondary': '#0c1a2e',
-  '--wfui-secondary-hover': '#0f2035',
-  '--wfui-text-secondary': '#7ec8e3',
+  '--wfui-accent': '#36a3d9',
+  '--wfui-text-interactive': '#7ec8e3',
 });
 
 // Then activate via data-theme or the hook:
 const { setTheme } = useWfuiTheme();
-setTheme('corpus');`}</Code>
+setTheme('custom example');`}</Code>
             </div>
         </section>
     );
