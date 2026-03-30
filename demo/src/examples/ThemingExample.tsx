@@ -82,7 +82,7 @@ export default function ThemingExample({ theme, onThemeChange }: { theme: string
             </p>
 
             <h3 className={styles.subTitle}>CSS only (no provider needed)</h3>
-            <div className={styles.example} style={{ flexDirection: 'column' }}>
+            <div className={styles.example}>
                 <div className={styles.preview}>
                     <p className={styles.sectionDesc} style={{ marginBottom: 0 }}>
                         The simplest approach, no React context required.
@@ -97,8 +97,8 @@ export default function ThemingExample({ theme, onThemeChange }: { theme: string
             </div>
 
             <h3 className={styles.subTitle}>WfuiProvider + useWfuiTheme</h3>
-            <div className={styles.example} style={{ flexDirection: 'column' }}>
-                <div className={styles.preview}>
+            <div className={styles.example}>
+                <div className={styles.preview} style={{ maxWidth: '100%' }}>
                     <WfuiProvider theme={theme} onThemeChange={onThemeChange}>
                         <ThemeConsumer />
                     </WfuiProvider>
@@ -137,7 +137,7 @@ function MyContent() {
             </div>
 
             <h3 className={styles.subTitle}>useWfuiThemeVars</h3>
-            <div className={styles.example} style={{ flexDirection: 'column' }}>
+            <div className={styles.example}>
                 <div className={styles.preview}>
                     <p className={styles.sectionDesc} style={{ marginBottom: 0 }}>
                         Read resolved CSS variable values to use in inline styles or logic.
@@ -157,7 +157,7 @@ function MyComponent() {
             </div>
 
             <h3 className={styles.subTitle}>Custom Theme (registerTheme)</h3>
-            <div className={styles.example} style={{ flexDirection: 'column' }}>
+            <div className={styles.example}>
                 <div className={styles.preview}>
                     <p className={styles.sectionDesc} style={{ marginBottom: 0 }}>
                         Click <strong>Custom</strong> button above to see the custom theme in action.
