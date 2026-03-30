@@ -144,13 +144,13 @@
 
 /* ─── Nidus ────────────────────────────────────────────────────── */
 [data-theme='nidus'] {
-  --wfui-bg: #edebdc;
-  --wfui-text: #8f265e;
-  --wfui-surface: #fefed1;
-  --wfui-accent: #f64a60;
-  --wfui-surface-alt: #fefeda;
-  --wfui-surface-alt-hover: #fefed1;
-  --wfui-text-interactive: #8f265e;
+  --wfui-bg: #E1E0CC;
+  --wfui-text: #8B2564;
+  --wfui-surface: #F8F7DB;
+  --wfui-accent: #F84A63;
+  --wfui-surface-alt: #EFEDD8;
+  --wfui-surface-alt-hover: #F5F1D8;
+  --wfui-text-interactive: #8B2564;
 }
 
 /* ─── Tenno ────────────────────────────────────────────────────── */
