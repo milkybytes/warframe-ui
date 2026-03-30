@@ -9,8 +9,6 @@ export interface WfuiThemeVars {
   '--wfui-surface': string;
   '--wfui-accent': string;
   '--wfui-text-interactive': string;
-  '--wfui-disabled-bg'?: string;
-  '--wfui-disabled-text'?: string;
   '--wfui-shadow'?: string;
 }
 
@@ -20,8 +18,6 @@ export const THEME_VAR_KEYS = [
   '--wfui-surface',
   '--wfui-accent',
   '--wfui-text-interactive',
-  '--wfui-disabled-bg',
-  '--wfui-disabled-text',
   '--wfui-shadow',
 ] as const;
 

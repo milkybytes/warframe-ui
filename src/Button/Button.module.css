@@ -16,13 +16,6 @@
 
   &:disabled {
     pointer-events: none;
-    color: rgba(from var(--wfui-disabled-text) R G B / 0.8);
-    background: var(--wfui-disabled-bg);
-
-    &:hover {
-      color: rgba(from var(--wfui-disabled-text) R G B / 0.8);
-      background: var(--wfui-disabled-bg);
-    }
   }
 }
 

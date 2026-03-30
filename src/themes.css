@@ -12,8 +12,6 @@
  *   --wfui-surface            Control surface (buttons, inputs, selects)
  *   --wfui-accent             Interactive highlight (hover text, active borders, glows)
  *   --wfui-text-interactive   Resting text/icon color for interactive elements
- *   --wfui-disabled-bg        Disabled background
- *   --wfui-disabled-text      Disabled text
  *   --wfui-shadow             Default box-shadow
  */
 
@@ -25,9 +23,6 @@
   --wfui-accent: #e8d55d;
   --wfui-surface-alt: color-mix(in oklch, var(--wfui-surface) 75%, var(--wfui-bg));
   --wfui-text-interactive: #ffffff;
-
-  --wfui-disabled-bg: #bdbdbd;
-  --wfui-disabled-text: #616161;
 
   --wfui-shadow: rgba(0, 0, 0, 0.5) 2px 2px 4px;
 }
