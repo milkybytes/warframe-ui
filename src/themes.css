@@ -170,13 +170,37 @@
 }
 
 /* ─── Tenno ────────────────────────────────────────────────────── */
-[data-theme='tenno'] {}
+[data-theme='tenno'] {
+  --wfui-bg: #C7D9DB;
+  --wfui-text: #0D4E6C;
+  --wfui-surface: #CFE7E9;
+  --wfui-accent: #076A4D;
+  --wfui-surface-alt: #D1E5E6;
+  --wfui-surface-alt-hover: #CBE3E5;
+  --wfui-text-interactive: #0D4E6C;
+}
 
 /* ─── Orokin ────────────────────────────────────────────────────── */
-[data-theme='orokin'] {}
+[data-theme='orokin'] {
+  --wfui-bg: #DEE2E3;
+  --wfui-text: #484212;
+  --wfui-surface: #EEF7F6;
+  --wfui-accent: #AE7B08;
+  --wfui-surface-alt: #ECF0F1;
+  --wfui-surface-alt-hover: #E8EEEE;
+  --wfui-text-interactive: #13271E;
+}
 
 /* ─── High Contrast ────────────────────────────────────────────────────── */
-[data-theme='highcontrast'] {}
+[data-theme='highcontrast'] {
+  --wfui-bg: #0C1733;
+  --wfui-text: #EE9C76;
+  --wfui-surface: #12203D;
+  --wfui-accent: #FFFF1B;
+  --wfui-surface-alt: #122341;
+  --wfui-surface-alt-hover: #122140;
+  --wfui-text-interactive: #67B0FD;
+}
 
 /* ─── Scrollbar ────────────────────────────────────────────────── */
 ::-webkit-scrollbar {
