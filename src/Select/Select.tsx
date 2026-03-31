@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect, useMemo } from 'react';
 import styles from './Select.module.css';
+import CheckIcon from '../icons/CheckIcon';
 
 export interface SelectOption {
   value: string;
@@ -96,10 +97,11 @@ const Select = ({
           }
         }}
       >
+        <span className={styles.bottom} />
         <span className={styles.selectValue}>
           {selectedOption ? selectedOption.label : placeholder}
         </span>
-        <span className={styles.selectArrow}>🞃</span>
+        <span className={styles.selectArrow} />
       </div>
 
       {isOpen && (
@@ -107,12 +109,13 @@ const Select = ({
           {parsedOptions.map((option) => (
             <div
               key={option.value}
-              className={styles.option}
+              className={`${styles.option} ${option.value === selectedValue ? styles.selected : ''}`}
               onClick={() => handleSelect(option.value)}
               role="option"
               aria-selected={option.value === selectedValue}
             >
               {option.label}
+              {option.value === selectedValue && <CheckIcon size={18} className={styles.checkIcon} />}
             </div>
           ))}
         </div>

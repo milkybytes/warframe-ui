@@ -14,19 +14,40 @@
   font-family: inherit;
   color: rgba(from var(--wfui-text-interactive) R G B / 0.8);
   background-color: var(--wfui-surface);
+  box-shadow: inset 0 0 0 1px rgba(from var(--wfui-bg) R G B / 0.3);
   border: none;
   border-radius: 0px;
   cursor: pointer;
-  transition: color 0.2s;
+  transition: color 0.2s, box-shadow 0.2s;
   display: flex;
   align-items: center;
   justify-content: space-between;
   user-select: none;
   overflow: hidden;
+  text-transform: uppercase;
+  font-weight: 600;
 }
 
-.select::before {
+.select:hover::after {
   content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%) translateY(10%);
+  width: 200%;
+  height: 100%;
+  pointer-events: none;
+  background: radial-gradient(
+    ellipse at 50% 100%,
+    rgba(from var(--wfui-accent) R G B / 0.8) 0%,
+    rgba(from var(--wfui-accent) R G B / 0.45) 20%,
+    rgba(from var(--wfui-accent) R G B / 0.2) 35%,
+    transparent 75%
+  );
+  z-index: 1;
+}
+
+.bottom {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -36,7 +57,7 @@
   pointer-events: none;
 }
 
-.select::after {
+.bottom::after {
   content: '';
   position: absolute;
   bottom: 0;
@@ -49,21 +70,13 @@
   pointer-events: none;
 }
 
+.select:hover .bottom::after {
+  width: 100%;
+}
+
 .select:hover {
   color: var(--wfui-accent);
-}
-
-.select:hover::after {
-  width: 100%;
-}
-
-.select:focus {
-  outline: none;
-  color: var(--wfui-accent);
-}
-
-.select:focus::after {
-  width: 100%;
+  box-shadow: inset 0 0 0 1px rgba(from var(--wfui-accent) R G B / 0.15);
 }
 
 .select.disabled {
@@ -71,17 +84,8 @@
   cursor: not-allowed;
 }
 
-.select.disabled::before,
 .select.disabled::after {
   display: none;
-}
-
-.select.open {
-  color: var(--wfui-accent);
-}
-
-.select.open::after {
-  width: 100%;
 }
 
 .selectValue {
@@ -96,14 +100,20 @@
 }
 
 .selectArrow {
-  font-size: 12px;
-  color: inherit;
+  width: 0;
+  height: 0;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-top: 9px solid currentColor;
   transition: transform 0.2s, color 0.2s;
   margin-left: 8px;
-  min-width: 12px;
-  text-align: center;
   z-index: 2;
   position: relative;
+  transform-origin: center center;
+}
+
+.select.open .selectArrow {
+  transform: rotate(180deg);
 }
 
 .optionsDropdown {
@@ -111,21 +121,70 @@
   top: calc(100%);
   left: 0;
   right: 0;
-  background-color: var(--wfui-surface-alt);
+  background-color: rgba(from var(--wfui-surface-alt) R G B / 0.98);
   max-height: 250px;
   overflow-y: auto;
   z-index: 1000;
-  box-shadow: var(--wfui-shadow)
 }
 
 .option {
   padding: 10px 12px;
   font-size: 14px;
-  color: var(--wfui-text);
+  color: var(--wfui-text-interactive);
   cursor: pointer;
-  transition: background-color 0.15s;
+  transition: background-color 0.15s, color 0.15s, box-shadow 0.15s;
+  position: relative;
+  overflow: hidden;
+  text-transform: uppercase;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: inset 0 0 0 1px rgba(from var(--wfui-bg) R G B / 0.3);
+}
+
+.checkIcon {
+  fill: var(--wfui-text-interactive);
+  flex-shrink: 0;
+  margin-left: 8px;
+  transition: fill 0.15s;
+}
+
+.option:hover .checkIcon {
+  fill: var(--wfui-accent);
 }
 
 .option:hover {
-  background-color: var(--wfui-bg);
+  color: var(--wfui-accent);
+  box-shadow: inset 0 0 0 1px rgba(from var(--wfui-accent) R G B / 0.15);
+}
+
+.option:hover::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--wfui-accent);
+  pointer-events: none;
+}
+
+.option:hover::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%) translateY(10%);
+  width: 200%;
+  height: 100%;
+  pointer-events: none;
+  background: radial-gradient(
+    ellipse at 50% 100%,
+    rgba(from var(--wfui-accent) R G B / 0.8) 0%,
+    rgba(from var(--wfui-accent) R G B / 0.45) 20%,
+    rgba(from var(--wfui-accent) R G B / 0.2) 35%,
+    transparent 75%
+  );
+  z-index: 1;
 }
