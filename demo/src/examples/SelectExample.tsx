@@ -37,7 +37,7 @@ export default function SelectExample() {
     <section id="select" className={styles.section}>
       <h2 className={styles.sectionTitle}>Select</h2>
       <p className={styles.sectionDesc}>
-        Custom dropdown select with keyboard navigation.
+        Custom dropdown select.
       </p>
       <div className={styles.example}>
         <div className={styles.preview}>
@@ -55,6 +55,9 @@ export default function SelectExample() {
   placeholder="Choose a warframe..."
 />`}</Code>
       </div>
+      <p className={styles.sectionDesc}>
+        With a <b>visibleOptions</b> prop to limit the number of displayed options and show a scrollbar for long lists.
+      </p>
       <div className={styles.example}>
         <div className={styles.preview}>
           <Select
