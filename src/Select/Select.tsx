@@ -110,7 +110,7 @@ const Select = ({
         <div
           className={styles.optionsDropdown}
           role="listbox"
-          style={visibleOptions ? { maxHeight: `calc(${visibleOptions} * var(--wfui-select-option-height, 39px))` } as React.CSSProperties : undefined}
+          style={visibleOptions ? { maxHeight: `${visibleOptions * 39}px` } : undefined}
         >
           {parsedOptions.map((option) => (
             <div

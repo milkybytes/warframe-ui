@@ -127,7 +127,6 @@
 }
 
 .option {
-  --wfui-select-option-height: 39px;
   padding: 10px 12px;
   font-size: 14px;
   color: var(--wfui-text-interactive);
