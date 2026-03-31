@@ -1,6 +1,6 @@
 {
   "name": "@milkybytes/warframe-ui",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Warframe-themed React UI components with CSS variable theming",
   "license": "MIT",
   "keywords": [
