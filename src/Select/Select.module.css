@@ -105,7 +105,7 @@
   border-left: 7px solid transparent;
   border-right: 7px solid transparent;
   border-top: 9px solid currentColor;
-  transition: transform 0.2s, color 0.2s;
+  transition: color 0.2s;
   margin-left: 8px;
   z-index: 2;
   position: relative;
@@ -122,12 +122,12 @@
   left: 0;
   right: 0;
   background-color: rgba(from var(--wfui-surface-alt) R G B / 0.98);
-  max-height: 250px;
   overflow-y: auto;
   z-index: 1000;
 }
 
 .option {
+  --wfui-select-option-height: 39px;
   padding: 10px 12px;
   font-size: 14px;
   color: var(--wfui-text-interactive);

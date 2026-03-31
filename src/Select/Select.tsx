@@ -17,6 +17,7 @@ export interface SelectProps {
   placeholder?: string;
   id?: string;
   required?: boolean;
+  visibleOptions?: number;
 }
 
 const Select = ({
@@ -29,6 +30,7 @@ const Select = ({
   placeholder = 'Select...',
   id,
   required,
+  visibleOptions,
 }: SelectProps) => {
   const [isOpen, setIsOpen] = useState(false);
   const [selectedValue, setSelectedValue] = useState(value);
@@ -105,7 +107,11 @@ const Select = ({
       </div>
 
       {isOpen && (
-        <div className={styles.optionsDropdown} role="listbox">
+        <div
+          className={styles.optionsDropdown}
+          role="listbox"
+          style={visibleOptions ? { maxHeight: `calc(${visibleOptions} * var(--wfui-select-option-height, 39px))` } as React.CSSProperties : undefined}
+        >
           {parsedOptions.map((option) => (
             <div
               key={option.value}
